@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="1b8ca261-f067-449f-8376-24ebc4891453" name="Pakete" linkedPackageId="15e2fa8e-7fcc-42a5-8d0d-6d85159df0eb" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="dcfb1df9-846e-4fa8-85e8-b0584ae8c310" name="Monatsabrechnung">
+        <elementDefinition Id="51053fbb-cfbc-434e-ae32-56d9dbc20c97" />
+        <suppliersInternal>
+          <dependency Id="9f0ee7ff-c4bc-4642-b3a2-2bc1e37223d6">
+            <packageMoniker Id="ef1e6e42-a513-4c41-92fa-df4bec4274af" LastKnownName="Mitgliederverwaltung" />
+            <elementDefinition Id="c4632df6-add1-4ffb-8350-4c486cd61f73" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="ef1e6e42-a513-4c41-92fa-df4bec4274af" name="Mitgliederverwaltung">
+        <elementDefinition Id="6e80835f-605b-4997-a94a-d5d505af15cb" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="15e2fa8e-7fcc-42a5-8d0d-6d85159df0eb" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+    <profileInstances>
+      <packageHasProfileInstances Id="8f5bd47d-cd9f-43cd-adf8-5d8b8a9e24ba">
+        <profileInstance Id="9f5d91de-f676-4ec7-af63-5abf4a5ede7e" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="22478da4-8c39-4008-abf2-a1f045b1aab3">
+        <profileInstance Id="26f0bce7-ece6-4f06-9be9-aeba2593f4c9" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

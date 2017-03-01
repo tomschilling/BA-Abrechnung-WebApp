@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="1cdcaf57-296f-40de-91a6-9aceda9e6df2" name="HinzufuegenMitarbeiter" linkedPackageId="b73c3abc-b8f9-4ebc-bd54-eaeab27efcca" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="73bc9448-3121-47cf-9643-cb041b8ff4bc" name="HinzufuegenMitarbeiter" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="075a6841-5f13-49ed-87f7-5efb8a8eed00" />
+        <nodes>
+          <objectNode Id="cd881086-68d3-4976-b349-915379a31324" name="Administrator" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="6115177b-30d2-48b1-90f2-2a86fbf03db8" />
+            <upperBound>
+              <literalInteger Id="b35c6d62-faef-4e09-8235-d49464502c3e" name="2147483647" value="2147483647">
+                <elementDefinition Id="b390af6e-9072-4fd9-864f-1065099b48fd" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="f89d7111-ba2c-4f76-ac31-8cff6fdac557" name="System " isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="116e487e-1de1-4d14-8bc4-4c2939b945b1" />
+            <upperBound>
+              <literalInteger Id="feb2057a-c31b-4f82-aad5-47ef7c5c3c0f" name="2147483647" value="2147483647">
+                <elementDefinition Id="bb98decc-bbb7-4581-afd9-9fa0066175ca" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <initialNode Id="e87facc4-17b8-4da9-8c70-b0e02643eeb4" name="Initial1" isLeaf="false">
+            <elementDefinition Id="fb010053-dfa2-43af-abbd-b3a34034eaef" />
+            <flowNodeTargets>
+              <controlFlow Id="2ec8df04-7bad-4c10-a65b-6ec0f2ce24f0" isLeaf="false">
+                <opaqueActionMoniker Id="d6b52024-6043-42a3-abf0-20055a4d0e57" LastKnownName="Seite für Mitarbeiterdateneingabe anzeigen " />
+                <elementDefinition Id="e082ae55-b4cc-4a11-833e-834f894a29d2" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="d6b52024-6043-42a3-abf0-20055a4d0e57" name="Seite für Mitarbeiterdateneingabe anzeigen " isLeaf="false">
+            <elementDefinition Id="1b7be6a8-79e1-495c-b997-6baa0100ae60" />
+            <flowNodeTargets>
+              <controlFlow Id="a4394bde-bba7-4553-9ae6-8cb86185a3b1" isLeaf="false">
+                <opaqueActionMoniker Id="5b782872-f7fa-4908-88bd-f9b7230957e8" LastKnownName="Benutzername und Passwort des Mitarbeiters eingeben und speichern oder Beenden  " />
+                <elementDefinition Id="dc2abb7a-c215-4244-a6b6-5017a1310b93" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="5b782872-f7fa-4908-88bd-f9b7230957e8" name="Benutzername und Passwort des Mitarbeiters eingeben und speichern oder Beenden  " isLeaf="false">
+            <elementDefinition Id="c9f2b925-d92f-470b-9ea9-27946f52f0fa" />
+            <flowNodeTargets>
+              <controlFlow Id="ec322db1-c7f7-4df7-a259-aa5c41379025" isLeaf="false">
+                <decisionNodeMoniker Id="f6ced253-cf61-4958-8d2a-3852d1f1cd2c" LastKnownName="Decision1" />
+                <elementDefinition Id="d1ad5b47-a937-4ddd-8c9c-7f2aa94362e0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="f6ced253-cf61-4958-8d2a-3852d1f1cd2c" name="Decision1" isLeaf="false">
+            <elementDefinition Id="743114b2-e2cb-449b-a749-172f16e608e0" />
+            <flowNodeTargets>
+              <controlFlow Id="1c7d7fda-d3e9-4907-ab14-6af25f3a7c94" guard="Beenden" isLeaf="false">
+                <opaqueActionMoniker Id="411faf18-8b44-4a25-8c85-bffc419f206b" LastKnownName="Beenden" />
+                <elementDefinition Id="4dc2007f-a6a0-4cca-ad2c-0d9eef6fc5e1" />
+              </controlFlow>
+              <controlFlow Id="b6b87911-9f51-4efd-a4d5-1c95c3e8ddca" guard="Speichern" isLeaf="false">
+                <opaqueActionMoniker Id="b7baeb90-21e3-48df-92ec-8b3f49583d83" LastKnownName="Speichert Mitarbeiterdaten" />
+                <elementDefinition Id="501e7d06-5675-4eeb-a38a-2710afbb9cb1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="411faf18-8b44-4a25-8c85-bffc419f206b" name="Beenden" isLeaf="false">
+            <elementDefinition Id="b426bb20-74de-4a25-a079-0b25fe0a8ad2" />
+            <flowNodeTargets>
+              <controlFlow Id="586ac6b1-fd65-494d-a9fb-dd1a1e4211db" isLeaf="false">
+                <activityFinalNodeMoniker Id="4e5a4328-abfc-4675-85aa-af943f3202c3" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="bd7f597d-b48b-463b-a6e2-2e07e66f56bf" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="4e5a4328-abfc-4675-85aa-af943f3202c3" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="9ab273f9-1454-4f6a-835c-2d1e1bc88613" />
+          </activityFinalNode>
+          <opaqueAction Id="b7baeb90-21e3-48df-92ec-8b3f49583d83" name="Speichert Mitarbeiterdaten" isLeaf="false">
+            <elementDefinition Id="a1e2fde4-acb3-497a-8306-7e7cab6bd0a2" />
+            <flowNodeTargets>
+              <controlFlow Id="355678d7-54e4-449e-aa32-6aa6ea18fe10" isLeaf="false">
+                <opaqueActionMoniker Id="d6b52024-6043-42a3-abf0-20055a4d0e57" LastKnownName="Seite für Mitarbeiterdateneingabe anzeigen " />
+                <elementDefinition Id="2a5304fe-d71f-4cf2-8589-08aaaef4ae42" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="b73c3abc-b8f9-4ebc-bd54-eaeab27efcca" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+    <profileInstances>
+      <packageHasProfileInstances Id="61f3189a-ba0f-4c5e-99a4-9787eafd8a29">
+        <profileInstance Id="9cb7b4b0-7a29-43bf-80ff-0fe1ca48273b" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="547647f1-6fd8-4c34-9453-7365b57ceb09">
+        <profileInstance Id="8603cd72-83f5-49a4-859c-8975b4dd6810" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

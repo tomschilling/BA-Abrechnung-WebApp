@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="2629c339-0faf-4e34-82b8-4a25895ca2ce" name="MitgliederverwaltungStateChart" linkedPackageId="31407fbb-f3db-4e9b-8173-b10e40367988" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="d3722dbf-0115-442a-8676-e5ba6a6a6b61" name="MitgliederverwaltungStateChart" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="0019e7af-1076-4fe7-a95f-b25fbc227f77" />
+        <nodes>
+          <initialNode Id="7141bd09-1d86-4003-9adc-63e15bf8637c" name="Initial1" isLeaf="false">
+            <elementDefinition Id="796aa855-45a9-4dab-b41d-25bf246d6984" />
+            <objectFlowTargets>
+              <objectFlow Id="868c61c8-6c96-4416-855c-fab7fb4ecb60" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="f77c1ce1-77a8-4e91-8cfd-736551afffa0" LastKnownName="Mitglieder" />
+                <elementDefinition Id="98aecc6d-ba39-4a36-bd3c-500a4ae5e72d" />
+              </objectFlow>
+            </objectFlowTargets>
+          </initialNode>
+          <objectNode Id="f77c1ce1-77a8-4e91-8cfd-736551afffa0" name="Mitglieder" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="4fde4274-3ec6-4d68-a98b-1bc4836863cb" />
+            <objectFlowTargets>
+              <objectFlow Id="dcb3d5dd-9e62-4c03-a1ba-de1326aa8d87" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="fa4f0e13-441e-4068-b69c-af62a57b9966" LastKnownName="Hinzufügen" />
+                <elementDefinition Id="bd342fb5-7cf2-40cd-b73c-7eb299a4b755" />
+              </objectFlow>
+              <objectFlow Id="5cfb6814-a128-4753-96c3-bf4054979ae0" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="01c29409-7339-4e5e-946d-c371b04dd534" LastKnownName="Bearbeiten" />
+                <elementDefinition Id="6d38a9ab-dcaa-4cd9-ab98-f6fc782d1409" />
+              </objectFlow>
+              <objectFlow Id="36b82db8-1553-4568-b961-f934ea8015d9" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="ca1cc9df-5c53-4647-8a9e-15e84d4f8c09" LastKnownName="Löschen" />
+                <elementDefinition Id="1c2fc1ce-1930-4c19-b3b8-bb47285a1e69" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="35a982eb-31db-471b-8ea5-f9d23bb64e66" name="2147483647" value="2147483647">
+                <elementDefinition Id="a7fc6add-7e1f-4671-aa34-ca486c3a0173" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="fa4f0e13-441e-4068-b69c-af62a57b9966" name="Hinzufügen" isLeaf="false">
+            <elementDefinition Id="822a8956-010e-4c3d-b086-ba54e6d27377" />
+            <objectFlowTargets>
+              <objectFlow Id="0e6e1c75-4f7a-47d9-9efa-c4e3a9c6e685" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="27bca523-b84c-4a27-b066-6279b7bb12e8" LastKnownName="Hinzufügen" />
+                <elementDefinition Id="c0e41c06-75b6-4a6b-8128-b9187687d3b0" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="27bca523-b84c-4a27-b066-6279b7bb12e8" name="Hinzufügen" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="4cbdae4e-151e-4c8d-9ef8-a02355d95b6d" />
+            <objectFlowTargets>
+              <objectFlow Id="7c428c2a-aba5-4fee-b41f-3393935d175a" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="edb551c2-3706-4916-b741-1940ebad7bf4" LastKnownName="Zurück" />
+                <elementDefinition Id="26a2a647-70aa-4697-8f11-b0fba1afcd32" />
+              </objectFlow>
+              <objectFlow Id="30752f37-2c81-4e37-8d37-26b5fa905f82" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="4397dae1-a7a0-41a3-b7c6-32ccc2fdb253" LastKnownName="Mitgliedsdaten eingeben" />
+                <elementDefinition Id="c20b7c9f-08a1-4633-99d6-188cbdb9d834" />
+              </objectFlow>
+              <objectFlow Id="7b4c921c-acab-4502-a6e5-a1b50d00903d" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="9a6eeb79-8827-4884-b5b6-86ae4588e13d" LastKnownName="Speichern" />
+                <elementDefinition Id="5a9ae715-e333-4dba-b82f-3360cb8f9c5a" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="f60c2cd0-13d4-4eac-97c6-6010a2b6080a" name="2147483647" value="2147483647">
+                <elementDefinition Id="60b4e481-e494-4816-b065-b1e08dc26eb0" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <mergeNode Id="c4c56ded-02fc-47f8-9b23-7118b80b166e" name="Merge3" isLeaf="false">
+            <elementDefinition Id="88d397d1-0ec5-4879-876f-c1d091a19642" />
+            <objectFlowTargets>
+              <objectFlow Id="ed01fa8a-938e-4fda-bf39-9181160125f4" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="f77c1ce1-77a8-4e91-8cfd-736551afffa0" LastKnownName="Mitglieder" />
+                <elementDefinition Id="66056cc1-df81-4b49-b8de-92646fd097a5" />
+              </objectFlow>
+            </objectFlowTargets>
+          </mergeNode>
+          <opaqueAction Id="edb551c2-3706-4916-b741-1940ebad7bf4" name="Zurück" isLeaf="false">
+            <elementDefinition Id="ac789e42-7a8e-47df-a687-fd95ca09507c" />
+            <flowNodeTargets>
+              <controlFlow Id="f4e414fb-ab68-4734-94b8-0eb2cc0774b3" isLeaf="false">
+                <mergeNodeMoniker Id="ec2b4809-5ca5-40d7-950b-bd60af703d65" LastKnownName="Merge4" />
+                <elementDefinition Id="81e4bf47-0668-4cef-850a-de3b5c943712" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4397dae1-a7a0-41a3-b7c6-32ccc2fdb253" name="Mitgliedsdaten eingeben" isLeaf="false">
+            <elementDefinition Id="fc6984c1-1d6f-49ab-9e0c-38ed902322e1" />
+            <objectFlowTargets>
+              <objectFlow Id="464823cd-c25a-4ad6-88ca-5be04db04321" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="27bca523-b84c-4a27-b066-6279b7bb12e8" LastKnownName="Hinzufügen" />
+                <elementDefinition Id="34979f5a-faf6-41c3-ad75-e8fbabff834e" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <opaqueAction Id="9a6eeb79-8827-4884-b5b6-86ae4588e13d" name="Speichern" isLeaf="false">
+            <elementDefinition Id="444823b7-2b05-4c4c-abbc-508bea9aeba6" />
+            <flowNodeTargets>
+              <controlFlow Id="278a79e0-3530-4619-97e4-857e1f2e0b05" isLeaf="false">
+                <mergeNodeMoniker Id="ec2b4809-5ca5-40d7-950b-bd60af703d65" LastKnownName="Merge4" />
+                <elementDefinition Id="02e40228-0c3f-4e6f-8b03-b6cb43cb9174" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="01c29409-7339-4e5e-946d-c371b04dd534" name="Bearbeiten" isLeaf="false">
+            <elementDefinition Id="a58a5a60-5214-4718-9c6d-2c0114f1a657" />
+            <objectFlowTargets>
+              <objectFlow Id="0036eafd-5be8-4910-9742-383a0ff3c89b" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="975d2e43-b7b4-49b9-8ea2-68f71a2d83d1" LastKnownName="Bearbeiten" />
+                <elementDefinition Id="1a9716c7-196e-4f7a-a5d1-683f75211360" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="975d2e43-b7b4-49b9-8ea2-68f71a2d83d1" name="Bearbeiten" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="64168bd7-bbac-479e-afe1-dde09290e7cb" />
+            <objectFlowTargets>
+              <objectFlow Id="d5b9d2dd-dccc-455a-bc26-32081aa578a2" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="90dbed4c-7ab0-407a-aa48-2851675b3b85" LastKnownName="Zurück" />
+                <elementDefinition Id="e8e8e205-686e-4dfc-85d0-06b0acf0ff6e" />
+              </objectFlow>
+              <objectFlow Id="9d99d53a-d72d-48fc-afa6-69e062a7e8fe" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="cbac2afb-02eb-47be-9d87-79a03da17872" LastKnownName="Speichern" />
+                <elementDefinition Id="5474e306-c9e5-4abf-98ad-22269c653280" />
+              </objectFlow>
+              <objectFlow Id="6204898b-4ab6-4c13-9d4c-9209b3322f46" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="3d369d74-a004-43c5-9a32-9fa215d6b433" LastKnownName="Mitgliedsdaten ändern" />
+                <elementDefinition Id="c64464e2-5f0c-48dc-9f33-581e621582ea" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="87aa9a2d-c8b8-4af3-8a93-0c089886717c" name="2147483647" value="2147483647">
+                <elementDefinition Id="a18024e2-a3e4-4182-bccd-78d59354d66b" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="90dbed4c-7ab0-407a-aa48-2851675b3b85" name="Zurück" isLeaf="false">
+            <elementDefinition Id="c3616500-bd90-4f6c-a9df-154980e87208" />
+            <flowNodeTargets>
+              <controlFlow Id="50db6d0f-9145-4706-ac15-a8a89235d285" isLeaf="false">
+                <mergeNodeMoniker Id="ec2b4809-5ca5-40d7-950b-bd60af703d65" LastKnownName="Merge4" />
+                <elementDefinition Id="e4ea1051-78d1-4373-920b-816df51d86ce" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="cbac2afb-02eb-47be-9d87-79a03da17872" name="Speichern" isLeaf="false">
+            <elementDefinition Id="cbdef7bc-7f1c-40b2-b31e-5cba01ba1586" />
+            <flowNodeTargets>
+              <controlFlow Id="6ea264ca-d72e-4538-8bfa-7320a6e26f86" isLeaf="false">
+                <mergeNodeMoniker Id="05ef543b-9c7c-48e8-82ad-5125ce77ee89" LastKnownName="Merge5" />
+                <elementDefinition Id="9bdae6b2-ea70-41f4-9814-aef7eb19cbbf" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode Id="ec2b4809-5ca5-40d7-950b-bd60af703d65" name="Merge4" isLeaf="false">
+            <elementDefinition Id="26e4f71a-6173-4c96-b5e2-7aacd0002293" />
+            <flowNodeTargets>
+              <controlFlow Id="ff0a33e8-8675-45d3-b8c6-c252fe1f8795" isLeaf="false">
+                <mergeNodeMoniker Id="c4c56ded-02fc-47f8-9b23-7118b80b166e" LastKnownName="Merge3" />
+                <elementDefinition Id="f0831cb4-5412-4a0c-88c4-dda81b0cfe41" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <opaqueAction Id="ca1cc9df-5c53-4647-8a9e-15e84d4f8c09" name="Löschen" isLeaf="false">
+            <elementDefinition Id="155988ab-75ce-4cbc-8081-5a05d2bff9db" />
+            <objectFlowTargets>
+              <objectFlow Id="92c10fd4-c648-4cdd-86bf-2343f147bd88" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="c8ed10d3-651d-4792-bf06-9a381d39583c" LastKnownName="Löschen" />
+                <elementDefinition Id="45a519dd-d69a-4836-8cee-3762e26e929e" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <objectNode Id="c8ed10d3-651d-4792-bf06-9a381d39583c" name="Löschen" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="c1f5310b-14e8-4c00-9630-3e2495bb63f2" />
+            <objectFlowTargets>
+              <objectFlow Id="6a246003-3b7e-4a28-92cd-9dd9bf1beb0d" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="58ad56b8-d790-4b82-93b4-0a936de076fb" LastKnownName="Ja" />
+                <elementDefinition Id="6dc57df4-b480-45db-a58c-f2647db9e3a4" />
+              </objectFlow>
+              <objectFlow Id="455a57d5-2638-41da-8b2f-94c3a23781f1" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="4f1d7b77-8b17-46d0-8433-de70ceead9d9" LastKnownName="Nein" />
+                <elementDefinition Id="b5c537cf-8ba4-4726-95b6-9abea237855b" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="05a94620-631b-4739-9a5b-22df7a1e338f" name="2147483647" value="2147483647">
+                <elementDefinition Id="5c25fd38-15c0-4287-b945-030d798dc41e" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="58ad56b8-d790-4b82-93b4-0a936de076fb" name="Ja" isLeaf="false">
+            <elementDefinition Id="c816624c-093a-4634-975b-b59c7c60c7a1" />
+            <flowNodeTargets>
+              <controlFlow Id="033ff4a7-896e-4d94-b011-10247449375d" isLeaf="false">
+                <mergeNodeMoniker Id="05ef543b-9c7c-48e8-82ad-5125ce77ee89" LastKnownName="Merge5" />
+                <elementDefinition Id="6f5d2779-e55b-4869-bce0-ca5590d78f8f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4f1d7b77-8b17-46d0-8433-de70ceead9d9" name="Nein" isLeaf="false">
+            <elementDefinition Id="a4539427-c8b2-4f60-be25-722190fe4e1d" />
+            <flowNodeTargets>
+              <controlFlow Id="d3f62d4a-0039-48af-a4d8-5049ae37cf47" isLeaf="false">
+                <mergeNodeMoniker Id="05ef543b-9c7c-48e8-82ad-5125ce77ee89" LastKnownName="Merge5" />
+                <elementDefinition Id="255e7c95-10cf-4954-94e1-76861347052c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode Id="05ef543b-9c7c-48e8-82ad-5125ce77ee89" name="Merge5" isLeaf="false">
+            <elementDefinition Id="efdd837b-5fb0-4f45-b900-cdcb82d1766d" />
+            <flowNodeTargets>
+              <controlFlow Id="b2b675e0-0f97-4e98-b9d9-92bf14a6c4ed" isLeaf="false">
+                <mergeNodeMoniker Id="ec2b4809-5ca5-40d7-950b-bd60af703d65" LastKnownName="Merge4" />
+                <elementDefinition Id="3048215c-5d2e-41cc-9803-c2831bddd750" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <opaqueAction Id="3d369d74-a004-43c5-9a32-9fa215d6b433" name="Mitgliedsdaten ändern" isLeaf="false">
+            <elementDefinition Id="3290ff40-f7eb-4d30-a819-2a4c8266e327" />
+            <objectFlowTargets>
+              <objectFlow Id="29b9e516-04dd-4c43-ada4-0469934121d6" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="975d2e43-b7b4-49b9-8ea2-68f71a2d83d1" LastKnownName="Bearbeiten" />
+                <elementDefinition Id="674041e4-9e34-4579-ae98-1febd2f739e0" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="31407fbb-f3db-4e9b-8173-b10e40367988" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+    <profileInstances>
+      <packageHasProfileInstances Id="0e875b3f-160c-4b2d-bb46-68f12a778d21">
+        <profileInstance Id="ff170e45-a7a7-46ce-b993-8d417d03f8d5" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="a92499e5-2a7d-4197-aba3-78659995272f">
+        <profileInstance Id="7735b17b-2264-4a8e-92f1-0f70ce25bbc6" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

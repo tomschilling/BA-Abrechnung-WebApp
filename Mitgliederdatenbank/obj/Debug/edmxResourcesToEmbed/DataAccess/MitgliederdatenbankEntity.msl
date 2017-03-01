@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MitgliederdatenbankModelStoreContainer" CdmEntityContainer="MitgliederdatenbankEntities">
+    <EntitySetMapping Name="tblBenutzer">
+      <EntityTypeMapping TypeName="MitgliederdatenbankModel.BenutzerEntity">
+        <MappingFragment StoreEntitySet="tblBenutzer">
+          <ScalarProperty Name="benIdPK" ColumnName="benIdPK" />
+          <ScalarProperty Name="benName" ColumnName="benName" />
+          <ScalarProperty Name="benPasswort" ColumnName="benPasswort" />
+          <ScalarProperty Name="benVersion" ColumnName="benVersion" />
+          <ScalarProperty Name="benIstAdmin" ColumnName="benIstAdmin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMitglieder">
+      <EntityTypeMapping TypeName="MitgliederdatenbankModel.MitgliederEntity">
+        <MappingFragment StoreEntitySet="tblMitglieder">
+          <ScalarProperty Name="mitMtglDatum" ColumnName="mitMtglDatum" />
+          <ScalarProperty Name="mitIdPk" ColumnName="mitIdPk" />
+          <ScalarProperty Name="mitName" ColumnName="mitName" />
+          <ScalarProperty Name="mitVorname" ColumnName="mitVorname" />
+          <ScalarProperty Name="mitStraßeNr" ColumnName="mitStraßeNr" />
+          <ScalarProperty Name="mitPlzOrt" ColumnName="mitPlzOrt" />
+          <ScalarProperty Name="mitTel" ColumnName="mitTel" />
+          <ScalarProperty Name="mitEmail" ColumnName="mitEmail" />
+          <ScalarProperty Name="mitGebDatum" ColumnName="mitGebDatum" />
+          <ScalarProperty Name="mitVersion" ColumnName="mitVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTrainingseinheiten">
+      <EntityTypeMapping TypeName="MitgliederdatenbankModel.TrainingseinheitenEntity">
+        <MappingFragment StoreEntitySet="tblTrainingseinheiten">
+          <ScalarProperty Name="trainIdPk" ColumnName="trainIdPk" />
+          <ScalarProperty Name="trainMitIdFk" ColumnName="trainMitIdFk" />
+          <ScalarProperty Name="trainMitName" ColumnName="trainMitName" />
+          <ScalarProperty Name="trainBenIdFk" ColumnName="trainBenIdFk" />
+          <ScalarProperty Name="trainBenName" ColumnName="trainBenName" />
+          <ScalarProperty Name="trainDatum" ColumnName="trainDatum" />
+          <ScalarProperty Name="trainVersion" ColumnName="trainVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

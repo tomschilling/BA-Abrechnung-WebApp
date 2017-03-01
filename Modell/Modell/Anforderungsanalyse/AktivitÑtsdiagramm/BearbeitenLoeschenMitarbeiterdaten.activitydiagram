@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="945ad24f-7ca5-471a-b7d5-3cca7abd5b69" name="BearbeitenLoeschenMitarbeiterdaten" linkedPackageId="6092f9f9-1cd5-46c5-9eb6-193154d375fa" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="0291bdf2-5b85-425b-a1bb-5a3be5e6a5b6">
+      <elementDefinition Id="eb516d42-caad-44c9-b275-66be871f3aad" />
+      <body>Abbruch</body>
+    </comment>
+    <comment Id="8408849c-6f54-4e0a-9b80-69d38b8cffbe">
+      <elementDefinition Id="e49312a7-cf0e-424e-83bb-0cd70288dcaf" />
+      <body>Mitarbeiter gelöscht</body>
+    </comment>
+    <comment Id="372cb380-a1b9-45ad-b8af-5ed27510f784">
+      <elementDefinition Id="6e03db39-7c83-4337-92e8-edf46af4c31d" />
+      <body>Mitarbeiterdaten geändert</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="8c79988d-57a8-429b-b33b-ad8f331d4e5c" name="BearbeitenLoeschenMitarbeiterdaten" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="c65bca42-9211-4fa0-af51-d71f372c5908" />
+        <nodes>
+          <objectNode Id="7f4efd5d-f5e3-4351-8d9d-11445c419027" name="Administrator" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="fefdd4e7-b43c-46ab-923e-2a36cf3070fc" />
+            <upperBound>
+              <literalInteger Id="4629f36f-500f-4513-904a-eb6163e04fed" name="2147483647" value="2147483647">
+                <elementDefinition Id="4c2730b3-8a78-4d3f-a737-5a9da547e11c" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="efd0eba8-0380-420f-a352-4c302209e67b" name="System" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="d35d3653-bcd4-4603-a64f-f6e402d7699d" />
+            <upperBound>
+              <literalInteger Id="d3128c0a-77b1-4cd5-9698-50908ab757a4" name="2147483647" value="2147483647">
+                <elementDefinition Id="d2bd305e-cb2a-4932-90c6-cbfd9c8d1948" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <initialNode Id="0fd85d89-c04c-49b0-816a-fc37a4e3bd9a" name="Initial1" isLeaf="false">
+            <elementDefinition Id="f7b1ab8e-382c-49cd-8709-72a8c4ee6a3f" />
+            <flowNodeTargets>
+              <controlFlow Id="7ef34dfa-85d5-4bdf-8175-400ce7d68678" isLeaf="false">
+                <opaqueActionMoniker Id="512700c6-37d3-48ef-9e50-9b53e73910f8" LastKnownName="Mitarbeiterdaten anzeigen " />
+                <elementDefinition Id="344bed22-b1d0-401f-b6ae-44ce6b38200d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="512700c6-37d3-48ef-9e50-9b53e73910f8" name="Mitarbeiterdaten anzeigen " isLeaf="false">
+            <elementDefinition Id="37c19a62-c72d-4f92-90f9-3da7fd0faf78" />
+            <flowNodeTargets>
+              <controlFlow Id="35fdb9bf-2b08-4dfe-9b09-bf31eba9969e" isLeaf="false">
+                <opaqueActionMoniker Id="ad2ec16f-b209-47a9-80a7-e7d4440c3e74" LastKnownName="Administrator kann Mitarbeiterdaten ändern, löschen oder bricht ab  " />
+                <elementDefinition Id="743dfddd-9526-4e3b-af63-629d1bdfc64e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="ad2ec16f-b209-47a9-80a7-e7d4440c3e74" name="Administrator kann Mitarbeiterdaten ändern, löschen oder bricht ab  " isLeaf="false">
+            <elementDefinition Id="aad650f2-6e37-47d7-b4c3-3c10b8213413" />
+            <flowNodeTargets>
+              <controlFlow Id="e4323da4-436d-41e4-bdb3-2c1feace1b84" isLeaf="false">
+                <decisionNodeMoniker Id="c3164daf-755f-4eb8-8280-4631d3073471" LastKnownName="Decision1" />
+                <elementDefinition Id="c1d843f3-d846-45b6-bae8-16eba5a0b81a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="c3164daf-755f-4eb8-8280-4631d3073471" name="Decision1" isLeaf="false">
+            <elementDefinition Id="491bc3e9-57b9-471a-8afa-9826863941da" />
+            <flowNodeTargets>
+              <controlFlow Id="46642cfb-a6ab-4a49-976f-2ac50a0cb805" guard="Abbrechen" isLeaf="false">
+                <opaqueActionMoniker Id="c076ca6d-b33c-4168-8d97-157ab309a787" LastKnownName="Zurück zur Mitarbeiterübersicht" />
+                <elementDefinition Id="4f421145-ebce-4255-8522-32b8742fdb8e" />
+              </controlFlow>
+              <controlFlow Id="c8c57dc4-58df-4846-9948-6c17e7f6a099" guard="Ändern" isLeaf="false">
+                <opaqueActionMoniker Id="54b147b2-9ab3-48c1-8a35-16121fcd8b0a" LastKnownName="Prüfen der eingegeben Daten " />
+                <elementDefinition Id="98f0589e-4dcc-4cb7-a01c-ac92dcb5e2fe" />
+              </controlFlow>
+              <controlFlow Id="8d91c9bb-4048-47ec-af05-2a5e77717a58" guard="Löschen" isLeaf="false">
+                <opaqueActionMoniker Id="cc775beb-1abb-4f70-9e31-61261f17a21d" LastKnownName="Löschen des Mitarbeiters aus dem System" />
+                <elementDefinition Id="9dfb48e9-4242-454d-a8a7-25f80d2a380c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="c076ca6d-b33c-4168-8d97-157ab309a787" name="Zurück zur Mitarbeiterübersicht" isLeaf="false">
+            <elementDefinition Id="b47b8a4d-45ae-4ccc-9fe2-0f1d1d8ce6ce" />
+            <flowNodeTargets>
+              <controlFlow Id="50f5f650-72ca-473c-ae4c-a27f9158abf7" isLeaf="false">
+                <activityFinalNodeMoniker Id="0ffdc437-aec5-4b55-9cd0-3e14b0c32f9b" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="92cf19b4-18d6-4287-9901-7764fe76fb11" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="54b147b2-9ab3-48c1-8a35-16121fcd8b0a" name="Prüfen der eingegeben Daten " isLeaf="false">
+            <elementDefinition Id="8a32b3f8-14fa-4ba6-8cc2-b12161a4bb66" />
+            <flowNodeTargets>
+              <controlFlow Id="ddc9da12-036d-4177-a83e-ddd297da56a5" isLeaf="false">
+                <decisionNodeMoniker Id="b2484f18-0d10-4991-8607-be32a3d15fac" LastKnownName="Decision11" />
+                <elementDefinition Id="c242279c-9c71-4f92-80d4-8f251c64cb6b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="cc775beb-1abb-4f70-9e31-61261f17a21d" name="Löschen des Mitarbeiters aus dem System" isLeaf="false">
+            <elementDefinition Id="ecb36c2f-f9e3-45d7-bafa-242d5b43457a" />
+            <flowNodeTargets>
+              <controlFlow Id="f5763b26-2f71-4049-a0eb-86575f8818eb" isLeaf="false">
+                <activityFinalNodeMoniker Id="abf29a75-0759-46ea-9b8a-3157aa99b439" LastKnownName="ActivityFinal11" />
+                <elementDefinition Id="a2cfcd3c-0ab4-4199-bec1-0abd9a837dde" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="b2484f18-0d10-4991-8607-be32a3d15fac" name="Decision11" isLeaf="false">
+            <elementDefinition Id="beb90564-84f2-4fdb-8715-c0379f2f46e1" />
+            <flowNodeTargets>
+              <controlFlow Id="21df8aa7-177c-4ce9-b4a2-1f1fb299f233" guard="Pflichtfelder aufgefüllt " isLeaf="false">
+                <opaqueActionMoniker Id="68411ddb-e41b-41ef-a5e9-a9fad861e423" LastKnownName="Speichern der geänderten Daten " />
+                <elementDefinition Id="a45f92b8-946c-46dd-9866-986e13c7dbd0" />
+              </controlFlow>
+              <controlFlow Id="23e94ee3-6b21-45e2-99ec-ba9f3d7d9237" guard="1 Pflichtfeld = 0" isLeaf="false">
+                <opaqueActionMoniker Id="c1936f97-1213-4e41-b91c-002a1c426a24" LastKnownName="Benachrichtigung, dass die geänderten Daten nicht gespeichert werden können " />
+                <elementDefinition Id="573cd136-bd99-4272-8541-c1fe5442d842" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="68411ddb-e41b-41ef-a5e9-a9fad861e423" name="Speichern der geänderten Daten " isLeaf="false">
+            <elementDefinition Id="0d01ae55-207a-4444-8e73-645f16561286" />
+            <flowNodeTargets>
+              <controlFlow Id="933b844a-f681-4e77-969c-e276a263a0da" isLeaf="false">
+                <activityFinalNodeMoniker Id="601a6c87-6d39-4976-a887-8ea14efc630b" LastKnownName="ActivityFinal12" />
+                <elementDefinition Id="0b69de32-ba9e-42cf-9663-fee5c52d0156" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="c1936f97-1213-4e41-b91c-002a1c426a24" name="Benachrichtigung, dass die geänderten Daten nicht gespeichert werden können " isLeaf="false">
+            <elementDefinition Id="cd801fcd-fa34-416b-8f79-a8a0749006cf" />
+            <flowNodeTargets>
+              <controlFlow Id="4fda72d9-05c8-47b5-a8e3-867ce625a398" isLeaf="false">
+                <opaqueActionMoniker Id="512700c6-37d3-48ef-9e50-9b53e73910f8" LastKnownName="Mitarbeiterdaten anzeigen " />
+                <elementDefinition Id="41224588-2309-4aa0-8ae1-acf1c3d522c4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="0ffdc437-aec5-4b55-9cd0-3e14b0c32f9b" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="e62d97b0-68db-4cc7-b7e0-e92301854c79" />
+          </activityFinalNode>
+          <activityFinalNode Id="abf29a75-0759-46ea-9b8a-3157aa99b439" name="ActivityFinal11" isLeaf="false">
+            <elementDefinition Id="f8da8f06-a404-4767-9a6c-3514303cb127" />
+          </activityFinalNode>
+          <activityFinalNode Id="601a6c87-6d39-4976-a887-8ea14efc630b" name="ActivityFinal12" isLeaf="false">
+            <elementDefinition Id="87993014-1816-4191-9e84-00c9e8f2144f" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="6092f9f9-1cd5-46c5-9eb6-193154d375fa" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+    <profileInstances>
+      <packageHasProfileInstances Id="373ba251-00e5-4398-84d8-877dcda515c7">
+        <profileInstance Id="b9b3f642-5b35-45b9-8c58-fc0fe905f5bf" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3c086486-ef11-44fb-b025-c1ab4f3c60e3">
+        <profileInstance Id="0006af88-bde7-48e9-ab8d-ea052bfbd119" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

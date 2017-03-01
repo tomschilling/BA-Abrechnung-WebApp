@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="bda80921-65ce-492e-bc54-1aff10b624a2" name="Anmeldung" linkedPackageId="9fd64fb7-eb2d-4a57-9ec9-df9cf1df57aa" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="02033602-c5a6-4f4f-8857-c688d0f78419" name="Benutzer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="63b2f409-32e9-4756-972a-d1d7eb64d8e6" />
+        <targetEnds>
+          <association Id="9d28d49f-9b4d-458a-b46e-a13f8f4b938d" isDerived="false" sourceEndRoleName="Benutzer" targetEndRoleName="Benutzer authentifizieren und autorisieren" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f57b452e-34a7-4e17-a29b-5bbff8775e25" LastKnownName="Benutzer authentifizieren und autorisieren" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c4c814ae-e89d-4336-9ff0-746667307f8f" name="Benutzer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="86e1d01e-59be-4571-bb81-05a2361c3388" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bdbace4f-2299-4faf-9dae-c0c5fb1f9e8f" name="Benutzer authentifizieren und autorisieren" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b71ef358-b9e7-4a80-885a-5918c8c163b5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="81d19a3b-d824-4063-ac0d-d3bf07e862c6" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f57b452e-34a7-4e17-a29b-5bbff8775e25" name="Benutzer authentifizieren und autorisieren" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7b1d6736-003e-4f48-b330-4400bf32d66d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="9fd64fb7-eb2d-4a57-9ec9-df9cf1df57aa" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+    <profileInstances>
+      <packageHasProfileInstances Id="424953ae-0e85-4959-8bcf-4990e3c68adb">
+        <profileInstance Id="d25521f1-a365-48d8-8889-9d61eab3d897" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f15df288-724e-42a8-91c2-2266df96de88">
+        <profileInstance Id="68420dec-e972-4837-a606-b0a48d103ef8" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

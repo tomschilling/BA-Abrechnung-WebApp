@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="dbEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="tblBenutzer" EntityType="dbModel.BenutzerEntity" />
+    <EntitySet Name="tblMitglieder" EntityType="dbModel.MitgliedEntity" />
+    <EntitySet Name="tblTrainingseinheiten" EntityType="dbModel.TrainingseinheitEntity" />
+    <AssociationSet Name="FK_tblTrainingseinheiten_tblBenutzer" Association="dbModel.FK_tblTrainingseinheiten_tblBenutzer">
+      <End Role="BenutzerEntity" EntitySet="tblBenutzer" />
+      <End Role="TrainingseinheitEntity" EntitySet="tblTrainingseinheiten" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTrainingseinheiten_tblMitglieder" Association="dbModel.FK_tblTrainingseinheiten_tblMitglieder">
+      <End Role="MitgliedEntity" EntitySet="tblMitglieder" />
+      <End Role="TrainingseinheitEntity" EntitySet="tblTrainingseinheiten" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BenutzerEntity">
+    <Key>
+      <PropertyRef Name="benIdPK" />
+    </Key>
+    <Property Name="benIdPK" Type="Int32" Nullable="false" />
+    <Property Name="benName" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="benPasswort" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="benVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+    <Property Name="benIstAdmin" Type="Boolean" />
+    <NavigationProperty Name="tblTrainingseinheiten" Relationship="dbModel.FK_tblTrainingseinheiten_tblBenutzer" FromRole="BenutzerEntity" ToRole="TrainingseinheitEntity" />
+    <Property Type="Boolean" Name="benIstVorgesetzter" />
+  </EntityType>
+  <EntityType Name="MitgliedEntity">
+    <Key>
+      <PropertyRef Name="mitIdPk" />
+    </Key>
+    <Property Name="mitIdPk" Type="Int32" Nullable="false" />
+    <Property Name="mitName" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="mitVorname" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="mitStraßeNr" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mitPlzOrt" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mitTel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mitEmail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="mitGebDatum" Type="DateTime" Precision="3" />
+    <Property Name="mitMtglDatum" Type="DateTime" Precision="3" />
+    <Property Name="mitVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="tblTrainingseinheiten" Relationship="dbModel.FK_tblTrainingseinheiten_tblMitglieder" FromRole="MitgliedEntity" ToRole="TrainingseinheitEntity" />
+  </EntityType>
+  <EntityType Name="TrainingseinheitEntity">
+    <Key>
+      <PropertyRef Name="trainIdPk" />
+    </Key>
+    <Property Name="trainIdPk" Type="Int32" Nullable="false" />
+    <Property Name="trainMitIdFk" Type="Int32" />
+    <Property Name="trainBenIdFk" Type="Int32" />
+    <Property Name="trainDatum" Type="DateTime" Precision="3" />
+    <Property Name="trainVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="tblBenutzer" Relationship="dbModel.FK_tblTrainingseinheiten_tblBenutzer" FromRole="TrainingseinheitEntity" ToRole="BenutzerEntity" />
+    <NavigationProperty Name="tblMitglieder" Relationship="dbModel.FK_tblTrainingseinheiten_tblMitglieder" FromRole="TrainingseinheitEntity" ToRole="MitgliedEntity" />
+  </EntityType>
+  <Association Name="FK_tblTrainingseinheiten_tblBenutzer">
+    <End Type="dbModel.BenutzerEntity" Role="BenutzerEntity" Multiplicity="0..1" />
+    <End Type="dbModel.TrainingseinheitEntity" Role="TrainingseinheitEntity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BenutzerEntity">
+        <PropertyRef Name="benIdPK" />
+      </Principal>
+      <Dependent Role="TrainingseinheitEntity">
+        <PropertyRef Name="trainBenIdFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTrainingseinheiten_tblMitglieder">
+    <End Type="dbModel.MitgliedEntity" Role="MitgliedEntity" Multiplicity="0..1" />
+    <End Type="dbModel.TrainingseinheitEntity" Role="TrainingseinheitEntity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MitgliedEntity">
+        <PropertyRef Name="mitIdPk" />
+      </Principal>
+      <Dependent Role="TrainingseinheitEntity">
+        <PropertyRef Name="trainMitIdFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

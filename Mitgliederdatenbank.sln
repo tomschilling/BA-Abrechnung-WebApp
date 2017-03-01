@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Mitgliederdatenbank2016-03-23", "Mitgliederdatenbank\Mitgliederdatenbank2016-03-23.vbproj", "{1641F64C-5BAF-436B-B1A4-45E633A96132}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Modell", "..\..\..\..\Documents\Visual Studio 2012\Projects\Modell\Modell\Modell.modelproj", "{3DDAE18B-3F2C-405B-ACC6-810F44F393D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1641F64C-5BAF-436B-B1A4-45E633A96132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1641F64C-5BAF-436B-B1A4-45E633A96132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1641F64C-5BAF-436B-B1A4-45E633A96132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1641F64C-5BAF-436B-B1A4-45E633A96132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DDAE18B-3F2C-405B-ACC6-810F44F393D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DDAE18B-3F2C-405B-ACC6-810F44F393D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DDAE18B-3F2C-405B-ACC6-810F44F393D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DDAE18B-3F2C-405B-ACC6-810F44F393D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

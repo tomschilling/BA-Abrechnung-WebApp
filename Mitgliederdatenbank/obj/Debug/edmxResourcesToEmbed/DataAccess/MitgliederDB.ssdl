@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MitgliederdatenbankModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MitgliederdatenbankModelStoreContainer">
+    <EntitySet Name="tblBenutzer" EntityType="MitgliederdatenbankModel.Store.tblBenutzer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblMitglieder" EntityType="MitgliederdatenbankModel.Store.tblMitglieder" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblTrainingseinheiten" EntityType="MitgliederdatenbankModel.Store.tblTrainingseinheiten" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_tblTrainingseinheiten_tblBenutzer" Association="MitgliederdatenbankModel.Store.FK_tblTrainingseinheiten_tblBenutzer">
+      <End Role="tblBenutzer" EntitySet="tblBenutzer" />
+      <End Role="tblTrainingseinheiten" EntitySet="tblTrainingseinheiten" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTrainingseinheiten_tblMitglieder" Association="MitgliederdatenbankModel.Store.FK_tblTrainingseinheiten_tblMitglieder">
+      <End Role="tblMitglieder" EntitySet="tblMitglieder" />
+      <End Role="tblTrainingseinheiten" EntitySet="tblTrainingseinheiten" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tblBenutzer">
+    <Key>
+      <PropertyRef Name="benIdPK" />
+    </Key>
+    <Property Name="benIdPK" Type="int" Nullable="false" />
+    <Property Name="benName" Type="nchar" MaxLength="10" />
+    <Property Name="benPasswort" Type="char" MaxLength="10" />
+    <Property Name="benVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="benIstAdmin" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblMitglieder">
+    <Key>
+      <PropertyRef Name="mitIdPk" />
+    </Key>
+    <Property Name="mitIdPk" Type="int" Nullable="false" />
+    <Property Name="mitName" Type="nchar" MaxLength="10" />
+    <Property Name="mitVorname" Type="nchar" MaxLength="10" />
+    <Property Name="mitStraßeNr" Type="nchar" MaxLength="10" />
+    <Property Name="mitPlzOrt" Type="nchar" MaxLength="10" />
+    <Property Name="mitTel" Type="nchar" MaxLength="10" />
+    <Property Name="mitEmail" Type="nchar" MaxLength="10" />
+    <Property Name="mitGebDatum" Type="date" />
+    <Property Name="mitMtglDatum" Type="date" />
+    <Property Name="mitVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="tblTrainingseinheiten">
+    <Key>
+      <PropertyRef Name="trainIdPk" />
+    </Key>
+    <Property Name="trainIdPk" Type="int" Nullable="false" />
+    <Property Name="trainMitIdFk" Type="int" />
+    <Property Name="trainMitName" Type="nchar" MaxLength="10" />
+    <Property Name="trainBenIdFk" Type="int" />
+    <Property Name="trainBenName" Type="nchar" MaxLength="10" />
+    <Property Name="trainDatum" Type="date" />
+    <Property Name="trainVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <Association Name="FK_tblTrainingseinheiten_tblBenutzer">
+    <End Role="tblBenutzer" Type="MitgliederdatenbankModel.Store.tblBenutzer" Multiplicity="0..1" />
+    <End Role="tblTrainingseinheiten" Type="MitgliederdatenbankModel.Store.tblTrainingseinheiten" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBenutzer">
+        <PropertyRef Name="benIdPK" />
+      </Principal>
+      <Dependent Role="tblTrainingseinheiten">
+        <PropertyRef Name="trainBenIdFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTrainingseinheiten_tblMitglieder">
+    <End Role="tblMitglieder" Type="MitgliederdatenbankModel.Store.tblMitglieder" Multiplicity="0..1" />
+    <End Role="tblTrainingseinheiten" Type="MitgliederdatenbankModel.Store.tblTrainingseinheiten" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMitglieder">
+        <PropertyRef Name="mitIdPk" />
+      </Principal>
+      <Dependent Role="tblTrainingseinheiten">
+        <PropertyRef Name="trainMitIdFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

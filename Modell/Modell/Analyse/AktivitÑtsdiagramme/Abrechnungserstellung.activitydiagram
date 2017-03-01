@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="4225de9b-38da-4f13-9fe7-8ac1afbbaf32" name="Abrechnungserstellung" linkedPackageId="dcedb8eb-9af8-4118-a189-342c0d884e67" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="8d6c8531-0ce2-4b96-84f1-f38f656eaa88">
+      <elementDefinition Id="aa69687b-28fe-43fe-bd92-1a0793c9510e" />
+      <body>Abrechnung gespeichert</body>
+      <annotatedElements>
+        <activityFinalNodeMoniker Id="feac5d00-d3c5-44e4-9b73-62b235d4dc15" LastKnownName="ActivityFinal1" />
+      </annotatedElements>
+    </comment>
+    <comment Id="a1d45eef-fabe-48b9-98a6-64e76752e313">
+      <elementDefinition Id="29f0f416-79a0-407e-89e3-ca34f70cc2bb" />
+      <body>Abrechnung 
+gedruckt</body>
+      <annotatedElements>
+        <activityFinalNodeMoniker Id="c5fdb473-afa2-4076-88cf-c937be46159d" LastKnownName="ActivityFinal2" />
+      </annotatedElements>
+    </comment>
+    <comment Id="1c062932-0d02-4b88-9fb8-901b52fc0140">
+      <elementDefinition Id="dfe2a55d-a07f-4bce-b2bf-8c19d8929cd3" />
+      <body>Abrechnungserstellung abgebrochen</body>
+      <annotatedElements>
+        <activityFinalNodeMoniker Id="f90f9262-f686-43c0-a22a-22a76e9b7d70" LastKnownName="ActivityFinal3" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <referencedType Id="4406e4e5-77cd-4ff4-a854-27396ee12a3c" name="AlleMitgliederVerwaltenBoundary" isAbstract="false" isLeaf="false" cachedFullName="Modell::AlleMitgliederVerwaltenBoundary">
+        <elementDefinition Id="820c3e09-97fb-4e01-9e6f-9696ef236311" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="57d8caaa-8f16-4d0e-a462-ce09668eb62b" name="AlleMitgliederVerwaltenCtrl" isAbstract="false" isLeaf="false" cachedFullName="Modell::AlleMitgliederVerwaltenCtrl">
+        <elementDefinition Id="092da375-8095-41c9-b37c-49a864fe888a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="81f0fe68-33c3-4ab9-ab99-ca2c2889eb8e" name="Mitglied" isAbstract="false" isLeaf="false" cachedFullName="Modell::Mitglied">
+        <elementDefinition Id="40778eab-7afd-4ac0-b0bd-ec817b9ba455" />
+      </referencedType>
+    </packageHasNamedElement>
+    <activityRootModelHasActivity>
+      <activity Id="4c59dadb-d9a7-4715-ab9f-b4f9322391db" name="Abrechnungserstellung" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="e69cc4db-a28f-4eff-bdc5-997edf13d5e8" />
+        <nodes>
+          <objectNode Id="00bfbe1f-7feb-4e57-b170-49855218944d" name="Mitarbeiter/Vorgesetzter" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="1163fb6f-a7d7-4273-98e1-fa63a98e7f5e" />
+            <upperBound>
+              <literalInteger Id="0159661b-1822-4f8a-813a-e02b69ed1ca2" name="2147483647" value="2147483647">
+                <elementDefinition Id="611e0ddb-4b92-4513-a174-d7e178075160" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="da7aa919-c62b-4416-b981-39bf5523f253" name="Boundary" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="831248f3-2079-4906-80e5-18d1f82af9cc" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="eced710e-d914-43d5-80b7-99aed9e1a3fb" LastKnownName="AbrechnungErstellenBoundary" />
+            </type_NamedElement>
+            <upperBound>
+              <literalInteger Id="1dc26b34-d78c-4a4c-9609-1bd7626c143d" name="2147483647" value="2147483647">
+                <elementDefinition Id="69dda05f-b5d1-4f67-a56a-1454096d9084" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="c69bafd5-f13c-41bc-bdaf-cd83c43c0136" name="Controll" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="aacf1dcc-67e1-4186-9d7e-756e571026b0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="57ffe092-c9a2-449f-847f-44be3aae97b0" LastKnownName="AbrechnungErstellenCtrl" />
+            </type_NamedElement>
+            <upperBound>
+              <literalInteger Id="706aa493-ff90-4dfb-967b-6d88842e6a6e" name="2147483647" value="2147483647">
+                <elementDefinition Id="12949426-5b86-4840-8c7e-75011b2e5b2a" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <callOperationAction Id="bedd204a-49ff-4d78-9bd8-8b69a87774ad" name="Hinzufügen einer Abrechnung eines ausgewählten Mitglieds ermöglichen" isLeaf="false">
+            <elementDefinition Id="143ffd4c-230d-4509-b201-4c0a000fcfcb" />
+            <flowNodeTargets>
+              <controlFlow Id="09ebfe74-0d76-4546-b6f8-782ba0e5e38c" isLeaf="false">
+                <callOperationActionMoniker Id="7c99f710-08ed-4131-b376-0d06e179a217" LastKnownName="Hinzufügen einer Abrechnung anzeigen" />
+                <elementDefinition Id="f181204b-06da-43d7-920a-2dd262d4954d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="7c99f710-08ed-4131-b376-0d06e179a217" name="Hinzufügen einer Abrechnung anzeigen" isLeaf="false">
+            <elementDefinition Id="89b132de-ff66-4e7d-8d7c-c84e6df5d6b7" />
+            <flowNodeTargets>
+              <controlFlow Id="ba5dc3be-441b-45e6-af2b-550171798671" isLeaf="false">
+                <opaqueActionMoniker Id="ca928052-0e3f-41ee-913a-58aa29d8c78f" LastKnownName="Neue Abrechnung erstellen" />
+                <elementDefinition Id="75c77b5a-cb6f-41b1-bc17-1169020ec942" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <opaqueAction Id="ca928052-0e3f-41ee-913a-58aa29d8c78f" name="Neue Abrechnung erstellen" isLeaf="false">
+            <elementDefinition Id="ed816075-62c3-44e8-b37a-caab8d5fcc29" />
+            <flowNodeTargets>
+              <controlFlow Id="5ff0cd67-f38d-46b8-a5ee-6f92d30c266a" isLeaf="false">
+                <callOperationActionMoniker Id="ae8ed762-df45-4a77-9a13-daf69803c375" LastKnownName="Erstellen einer Abrechnung ausloesen " />
+                <elementDefinition Id="b2804200-6bcf-4858-acda-6e343dfe219a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="93ef9d2a-3593-460b-9f6d-4db0933536fe" name="Decision1" isLeaf="false">
+            <elementDefinition Id="d5d625d3-8073-4ee2-8951-8618ccb8bf72" />
+            <flowNodeTargets>
+              <controlFlow Id="50b1e734-8b41-4a3e-ac95-b9f3dc7a1afe" guard="ist kein Vorgesetzter" isLeaf="false">
+                <callOperationActionMoniker Id="7c99f710-08ed-4131-b376-0d06e179a217" LastKnownName="Hinzufügen einer Abrechnung anzeigen" />
+                <elementDefinition Id="179a1fba-3568-4dba-9e7b-fb89d3fb34c7" />
+              </controlFlow>
+              <controlFlow Id="9d03912c-5218-4678-a443-9def079ce66b" guard="ist ein Vorgesetzter" isLeaf="false">
+                <callOperationActionMoniker Id="3f4304ef-cf4e-4604-a3a3-481b8e089a54" LastKnownName="Erstellen der Abrechnung" />
+                <elementDefinition Id="f2ab24f4-5181-4693-8c73-fd4846ff8535" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <callOperationAction Id="ae8ed762-df45-4a77-9a13-daf69803c375" name="Erstellen einer Abrechnung ausloesen " isLeaf="false">
+            <elementDefinition Id="5cc009e2-71f9-4016-8727-7ce6e429f885" />
+            <flowNodeTargets>
+              <controlFlow Id="e8971c42-da6c-4367-81f6-b070f64ef2b8" isLeaf="false">
+                <callOperationActionMoniker Id="7f8794a8-29ba-43da-a79e-e566870467ed" LastKnownName="Prüfen, ob der Mitarbeiter ein Vorgesetzter ist" />
+                <elementDefinition Id="506d1e79-1b86-4d82-8f65-fc100f219e58" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <initialNode Id="55f18881-6485-47d8-b9b6-eb0f8f77270a" name="Initial1" isLeaf="false">
+            <elementDefinition Id="9f81fef5-b869-4e18-bcde-d903e714524c" />
+            <flowNodeTargets>
+              <controlFlow Id="b00e8fc1-3359-4e85-9a32-25da54104e23" isLeaf="false">
+                <callOperationActionMoniker Id="bedd204a-49ff-4d78-9bd8-8b69a87774ad" LastKnownName="Hinzufügen einer Abrechnung eines ausgewählten Mitglieds ermöglichen" />
+                <elementDefinition Id="0bcfa8e2-a490-41b1-8b78-8408fc3389f5" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <callOperationAction Id="7f8794a8-29ba-43da-a79e-e566870467ed" name="Prüfen, ob der Mitarbeiter ein Vorgesetzter ist" isLeaf="false">
+            <elementDefinition Id="e5b9abbc-de5f-4cc5-9e35-f3bfbd56ee46" />
+            <flowNodeTargets>
+              <controlFlow Id="b51acef2-2a77-4b73-a93a-645407d0809e" isLeaf="false">
+                <decisionNodeMoniker Id="93ef9d2a-3593-460b-9f6d-4db0933536fe" LastKnownName="Decision1" />
+                <elementDefinition Id="cbf85c8a-d2ef-449e-b0b1-7d1705f3f83e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="3f4304ef-cf4e-4604-a3a3-481b8e089a54" name="Erstellen der Abrechnung" isLeaf="false">
+            <elementDefinition Id="9c7da4ab-e8ca-4eb3-b921-c5eee3923942" />
+            <flowNodeTargets>
+              <controlFlow Id="36e60c39-4343-400f-b607-97e84f56640d" isLeaf="false">
+                <callOperationActionMoniker Id="725587e5-94f0-4307-a027-b197bb45e89c" LastKnownName="Abrechnung anzeigen" />
+                <elementDefinition Id="a9c1352c-0f2e-4bab-85bf-6f9266f33078" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="725587e5-94f0-4307-a027-b197bb45e89c" name="Abrechnung anzeigen" isLeaf="false">
+            <elementDefinition Id="3a770687-9706-4507-9d88-2a7f59f91f88" />
+            <flowNodeTargets>
+              <controlFlow Id="dd94a0d7-02cd-4419-b5f4-bbed26aaa3b1" isLeaf="false">
+                <opaqueActionMoniker Id="8854298c-80d0-439a-96e0-050bc47b79b2" LastKnownName="Abrechnung speichern, drucken oder abbrechen" />
+                <elementDefinition Id="daf6c89e-bfe7-41bc-9044-9f8250093c92" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <opaqueAction Id="8854298c-80d0-439a-96e0-050bc47b79b2" name="Abrechnung speichern, drucken oder abbrechen" isLeaf="false">
+            <elementDefinition Id="a909d45b-160e-4e8d-9e3c-c06b9c18afc8" />
+            <flowNodeTargets>
+              <controlFlow Id="13501082-6f85-45ef-a267-c8475e1d5491" isLeaf="false">
+                <decisionNodeMoniker Id="bbf810e2-b8ec-4319-b7a4-adc4b1ae1bdc" LastKnownName="Decision2" />
+                <elementDefinition Id="1d672b8d-fee5-4300-972d-f44f8f1fd27c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <callOperationAction Id="b6daba57-1121-4e56-9a92-41633168455e" name="Abrechnung speichern ausloesen" isLeaf="false">
+            <elementDefinition Id="4e5dff55-b433-4cde-97dd-c3ee04c90a39" />
+            <flowNodeTargets>
+              <controlFlow Id="6cbafeb0-9fbd-4b65-ac32-d84c8eb06cc6" isLeaf="false">
+                <callOperationActionMoniker Id="a563ba7e-5f38-4f61-9a65-822524f56b73" LastKnownName="Abrechnung speichern" />
+                <elementDefinition Id="1e7bcf5f-d579-4adf-a3cf-871305ecdf19" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="9d86ff2f-0c1a-48ca-8ae8-88cbdef3bc18" name="Abrechnung drucken ausloesen" isLeaf="false">
+            <elementDefinition Id="984939f5-bb80-4e83-b53a-4cade9cf02fa" />
+            <flowNodeTargets>
+              <controlFlow Id="275bdfba-3eb1-48e6-9922-db847745c5e6" isLeaf="false">
+                <callOperationActionMoniker Id="00f9af22-ba77-402b-8ddb-f5fb8ba06597" LastKnownName="Abrechnung drucken" />
+                <elementDefinition Id="533906dd-18c3-4936-a900-7c824087fbd5" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="a563ba7e-5f38-4f61-9a65-822524f56b73" name="Abrechnung speichern" isLeaf="false">
+            <elementDefinition Id="1af2a9cf-9d31-4399-a648-94cfb67152bd" />
+            <flowNodeTargets>
+              <controlFlow Id="28e04e3f-9abb-4c17-b777-8e68f275a4da" isLeaf="false">
+                <activityFinalNodeMoniker Id="feac5d00-d3c5-44e4-9b73-62b235d4dc15" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="29c37755-afce-4b0a-a43b-2a7ee023e3c7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="00f9af22-ba77-402b-8ddb-f5fb8ba06597" name="Abrechnung drucken" isLeaf="false">
+            <elementDefinition Id="64c11f4c-d521-41fe-950b-d800dd9ef31c" />
+            <flowNodeTargets>
+              <controlFlow Id="affd69a9-eb44-49ea-96bb-948e5f813e4b" isLeaf="false">
+                <activityFinalNodeMoniker Id="c5fdb473-afa2-4076-88cf-c937be46159d" LastKnownName="ActivityFinal2" />
+                <elementDefinition Id="73eebc9e-1548-4d94-b362-cbd2b1590fdd" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <decisionNode Id="bbf810e2-b8ec-4319-b7a4-adc4b1ae1bdc" name="Decision2" isLeaf="false">
+            <elementDefinition Id="33eda43c-e3e7-4994-a666-00a641815996" />
+            <flowNodeTargets>
+              <controlFlow Id="bf10cd17-ec87-49b9-be5a-c658ef4b5dde" guard="Abrechnung speichern" isLeaf="false">
+                <callOperationActionMoniker Id="b6daba57-1121-4e56-9a92-41633168455e" LastKnownName="Abrechnung speichern ausloesen" />
+                <elementDefinition Id="126fe3f4-a425-4f5b-8c3c-0987633f3c1e" />
+              </controlFlow>
+              <controlFlow Id="8cc5b8fc-0e8e-4b6a-b602-c8fe618623bf" guard="Abrechnung drucken" isLeaf="false">
+                <callOperationActionMoniker Id="9d86ff2f-0c1a-48ca-8ae8-88cbdef3bc18" LastKnownName="Abrechnung drucken ausloesen" />
+                <elementDefinition Id="c97fecc5-4604-4748-9dbd-a95da805d08f" />
+              </controlFlow>
+              <controlFlow Id="b2633f84-ecec-4145-8c1e-589a8ffea61c" guard="Abbrechen" isLeaf="false">
+                <callOperationActionMoniker Id="2bcb8f02-f3ce-4456-982d-d1859e39f2c6" LastKnownName="Abrechnung verwerfen" />
+                <elementDefinition Id="4fb91bbb-fe14-41f8-8385-9c58838a9636" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <callOperationAction Id="2bcb8f02-f3ce-4456-982d-d1859e39f2c6" name="Abrechnung verwerfen" isLeaf="false">
+            <elementDefinition Id="f665d88b-4d89-4775-85b0-ab712aba4342" />
+            <flowNodeTargets>
+              <controlFlow Id="5758b7ed-bf05-4b0b-b5ec-bb6bcb0f4005" isLeaf="false">
+                <callOperationActionMoniker Id="6bb56431-692f-468e-953a-ef223294343d" LastKnownName="Abrechnungserstellung abbrechen" />
+                <elementDefinition Id="fd7967f4-db2f-4b69-a8a4-52165948046c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="6bb56431-692f-468e-953a-ef223294343d" name="Abrechnungserstellung abbrechen" isLeaf="false">
+            <elementDefinition Id="6d339868-a2cc-4911-a918-b9cfd1a9a3bd" />
+            <flowNodeTargets>
+              <controlFlow Id="690f394f-4111-4358-a49b-7ecb2bb4e430" isLeaf="false">
+                <activityFinalNodeMoniker Id="f90f9262-f686-43c0-a22a-22a76e9b7d70" LastKnownName="ActivityFinal3" />
+                <elementDefinition Id="7ae3d817-2493-49ce-85e9-03de637b4e5e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <activityFinalNode Id="feac5d00-d3c5-44e4-9b73-62b235d4dc15" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="40f76e56-389b-4fa3-986a-589fffff8b12" />
+          </activityFinalNode>
+          <activityFinalNode Id="c5fdb473-afa2-4076-88cf-c937be46159d" name="ActivityFinal2" isLeaf="false">
+            <elementDefinition Id="9a17af50-a8cd-4554-b618-80c8aec84abf" />
+          </activityFinalNode>
+          <activityFinalNode Id="f90f9262-f686-43c0-a22a-22a76e9b7d70" name="ActivityFinal3" isLeaf="false">
+            <elementDefinition Id="0fa042c7-ba8e-46d0-8c69-bde4c63bff8a" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+    <packageHasNamedElement>
+      <referencedType Id="eced710e-d914-43d5-80b7-99aed9e1a3fb" name="AbrechnungErstellenBoundary" isAbstract="false" isLeaf="false" cachedFullName="Modell::AbrechnungErstellenBoundary">
+        <elementDefinition Id="16e192b6-146b-488f-bd74-8b2c729abd66" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="57ffe092-c9a2-449f-847f-44be3aae97b0" name="AbrechnungErstellenCtrl" isAbstract="false" isLeaf="false" cachedFullName="Modell::AbrechnungErstellenCtrl">
+        <elementDefinition Id="ac1f6e3b-6ccb-45d0-9da4-61cc1f2587bf" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7071793b-39fe-458b-8d67-9d786be77d55" name="Abrechnung" isAbstract="false" isLeaf="false" cachedFullName="Modell::Abrechnung">
+        <elementDefinition Id="a6b64fe0-44e9-4a53-adfc-8e3c1daef8ea" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a3d58971-7f40-4676-aa62-4208b05d77b9" name="Abrechnung" isAbstract="false" isLeaf="false" cachedFullName="Modell::Abrechnung">
+        <elementDefinition Id="a6b64fe0-44e9-4a53-adfc-8e3c1daef8ea" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="dcedb8eb-9af8-4118-a189-342c0d884e67" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+    <profileInstances>
+      <packageHasProfileInstances Id="1d9fabcc-e249-4ccf-8d30-26394a551667">
+        <profileInstance Id="a800d2b4-59dd-4f89-8a25-0396626f9c3a" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="2d03395b-ae12-4d46-ab9b-8ba2ad042fc2">
+        <profileInstance Id="6896f26b-31f6-4861-91bd-6995a73d208b" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

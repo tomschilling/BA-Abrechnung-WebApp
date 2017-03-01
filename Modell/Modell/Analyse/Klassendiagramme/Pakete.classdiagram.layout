@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Pakete">
+  <logicalClassDesignerModelMoniker Id="1b8ca261-f067-449f-8376-24ebc4891453" />
+  <nestedChildShapes>
+    <packageShape Id="98d09e51-de88-490f-8c9c-3896158657be" absoluteBounds="2.25, 0.5, 2.625, 1.25" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="dcfb1df9-846e-4fa8-85e8-b0584ae8c310" LastKnownName="Monatsabrechnung" />
+    </packageShape>
+    <packageShape Id="59bb3acc-4d6d-4647-872d-51e535f8a328" absoluteBounds="2.375, 2.875, 2.5, 1.25" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="ef1e6e42-a513-4c41-92fa-df4bec4274af" LastKnownName="Mitgliederverwaltung" />
+    </packageShape>
+    <dependencyConnector edgePoints="[(3.625 : 1.75); (3.625 : 2.875)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <dependencyMoniker Id="9f0ee7ff-c4bc-4642-b3a2-2bc1e37223d6" />
+      <relativeChildShapes />
+      <nodes>
+        <packageShapeMoniker Id="98d09e51-de88-490f-8c9c-3896158657be" />
+        <packageShapeMoniker Id="59bb3acc-4d6d-4647-872d-51e535f8a328" />
+      </nodes>
+    </dependencyConnector>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

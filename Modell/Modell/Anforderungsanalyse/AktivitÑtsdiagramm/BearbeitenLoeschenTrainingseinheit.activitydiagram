@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="6719551a-5778-42dd-b73c-03a76f36d379" name="BearbeitenLoeschenTrainingseinheit" linkedPackageId="1d798984-2ac0-4ee5-ad00-f96fea90f7ba" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="7928e014-1767-48d0-8b55-f091c30dddec">
+      <elementDefinition Id="268ad184-4e75-4244-b8e8-c88053a2ab35" />
+      <body>Abbruch</body>
+    </comment>
+    <comment Id="1ef5d49d-820e-4aff-af4c-a8b104439f23">
+      <elementDefinition Id="1c5269af-ade1-4de6-b5c7-3a2beff6a95d" />
+      <body>Trainingseinheit gelöscht</body>
+    </comment>
+    <comment Id="edde715d-67e4-4360-86f9-c248fed790dd">
+      <elementDefinition Id="0a74adc6-dfda-496b-8d2e-a49dd32af0cc" />
+      <body>Trainingseinheit geändert</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="032b0191-7962-4f1c-b2bf-f1d4dbbe864c">
+      <profileInstance Id="a20540d1-8349-4c88-a59f-b8a891081ffc" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="9c5d0ea5-4d5e-40e6-b85a-b5f8e3dfd823">
+      <profileInstance Id="efd4b80c-a2a0-4101-9e32-61cecd748a16" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="5663bf26-757e-409f-87ed-158ec836a43d" name="BearbeitenLoeschenTrainingseinheit" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="9afc3a49-c5b8-4d20-9ed4-d494843b5634" />
+        <nodes>
+          <objectNode Id="ef1bda40-bd7b-4db3-bc68-6266012961e3" name="Mitarbeiter/Vorgesetzter" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="6f7ddcd9-700c-47ee-89e6-59fd47ede837" />
+            <upperBound>
+              <literalInteger Id="35336b50-85ed-449e-82a2-83f7b4fd70b4" name="2147483647" value="2147483647">
+                <elementDefinition Id="1b8cab0b-75e0-4f40-8aed-d9e9dc04d46f" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="e5793af3-71fa-4945-90e2-5ad9416bfe42" name="System" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="de44e658-9a18-473c-9743-f34040f177ec" />
+            <upperBound>
+              <literalInteger Id="47b55a67-22cc-4b4f-a092-7f05598482d3" name="2147483647" value="2147483647">
+                <elementDefinition Id="0faf878f-a4ae-493f-a6b6-2f9aa634d3f2" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <initialNode Id="8041e598-7c64-4dca-b1d7-1b6b02e1454d" name="Initial1" isLeaf="false">
+            <elementDefinition Id="38d814e5-14a6-48b8-84ea-29b0cbd4e843" />
+            <flowNodeTargets>
+              <controlFlow Id="5787837d-36df-40cb-bbd0-ee236b1fade5" isLeaf="false">
+                <opaqueActionMoniker Id="48ea9d9d-9a5a-45eb-bfa9-5b4e27fbfadf" LastKnownName="Alle Trainingseinheiten anzeigen und Bearbeitungsmöglichkeiten anbieten" />
+                <elementDefinition Id="6c082d5e-c483-4568-834a-b19c6eac5947" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="48ea9d9d-9a5a-45eb-bfa9-5b4e27fbfadf" name="Alle Trainingseinheiten anzeigen und Bearbeitungsmöglichkeiten anbieten" isLeaf="false">
+            <elementDefinition Id="e63ac2f4-06b4-4f6f-ae9c-7815506a9a3c" />
+            <flowNodeTargets>
+              <controlFlow Id="6a39670e-283e-4774-90c5-d0edffc1cad6" isLeaf="false">
+                <opaqueActionMoniker Id="16de0fc4-4b61-4ba5-a3c3-5ba358fcb2be" LastKnownName="Mitarbeite/Vorgesetzter kann Trainingseinheiten ändern, löschen oder bricht ab  " />
+                <elementDefinition Id="9c83d016-edc3-47e9-ab66-574324dc9957" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="16de0fc4-4b61-4ba5-a3c3-5ba358fcb2be" name="Mitarbeite/Vorgesetzter kann Trainingseinheiten ändern, löschen oder bricht ab  " isLeaf="false">
+            <elementDefinition Id="4309558b-626b-4f0b-9bd6-273a0c943c95" />
+            <flowNodeTargets>
+              <controlFlow Id="5040b996-8568-4a83-ad9d-45a257f0e529" isLeaf="false">
+                <decisionNodeMoniker Id="f04c5fc8-50e4-4955-ab10-9778f4afa437" LastKnownName="Decision1" />
+                <elementDefinition Id="e734971a-f5a1-4bac-8874-7589ea34c4e4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="f04c5fc8-50e4-4955-ab10-9778f4afa437" name="Decision1" isLeaf="false">
+            <elementDefinition Id="5570de6a-09fc-41e8-bf95-f74b49ca506a" />
+            <flowNodeTargets>
+              <controlFlow Id="ddd27895-6402-438c-9576-bc2f8316f99d" guard="Abbrechen" isLeaf="false">
+                <opaqueActionMoniker Id="a8061d2f-a1a7-496d-bd91-778deb00db77" LastKnownName="Zurück zur Trainingseinheitenübersicht" />
+                <elementDefinition Id="4c91c9af-135a-4c27-9e5b-44fdbbee784b" />
+              </controlFlow>
+              <controlFlow Id="cb94b664-585b-47f0-b5e0-4fd5f2bba276" guard="Ändern" isLeaf="false">
+                <opaqueActionMoniker Id="2462236a-86bb-430a-8b2c-bf8b4bb751bd" LastKnownName="Prüfen der eingegeben Daten " />
+                <elementDefinition Id="1ece1f74-dc6b-42ad-b4fa-483b995c1740" />
+              </controlFlow>
+              <controlFlow Id="3b4dbc9c-22a8-4645-aafe-e86d25976c8f" guard="Löschen" isLeaf="false">
+                <opaqueActionMoniker Id="4f5ef3ac-1c63-420b-bb79-9aaf7dc4f58f" LastKnownName="Löschen der Trainingseinheit aus dem System" />
+                <elementDefinition Id="b65919d9-b353-4c5a-b2e1-419bb5ce0523" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="a8061d2f-a1a7-496d-bd91-778deb00db77" name="Zurück zur Trainingseinheitenübersicht" isLeaf="false">
+            <elementDefinition Id="40dd8695-acd2-45b3-97e1-86b71db23720" />
+            <flowNodeTargets>
+              <controlFlow Id="4c4d9cea-1423-44cc-8126-803af068de67" isLeaf="false">
+                <activityFinalNodeMoniker Id="d692bc58-8f81-4135-9775-265515d5e0df" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="208c5d1e-99cf-4925-ab53-607238b2a3a6" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="2462236a-86bb-430a-8b2c-bf8b4bb751bd" name="Prüfen der eingegeben Daten " isLeaf="false">
+            <elementDefinition Id="f29b908a-f597-4dc9-8949-f689c11ab618" />
+            <flowNodeTargets>
+              <controlFlow Id="9fb53517-44b8-4b6d-a983-9c3089c93c65" isLeaf="false">
+                <decisionNodeMoniker Id="72c7381a-a21b-4c6b-9720-106627da3f9e" LastKnownName="Decision11" />
+                <elementDefinition Id="d5f1fcfb-a17c-4ac9-b5e8-f05f5139bf43" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4f5ef3ac-1c63-420b-bb79-9aaf7dc4f58f" name="Löschen der Trainingseinheit aus dem System" isLeaf="false">
+            <elementDefinition Id="60d32fb7-2edc-477c-9407-6632a7f08cab" />
+            <flowNodeTargets>
+              <controlFlow Id="c936046f-29e6-4f3c-9fbe-b98385ec76ca" isLeaf="false">
+                <activityFinalNodeMoniker Id="2171e136-f942-4025-9254-0c7cc1d979ec" LastKnownName="ActivityFinal11" />
+                <elementDefinition Id="970c005e-5fcc-4af2-b0a0-2d8a9c099363" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="72c7381a-a21b-4c6b-9720-106627da3f9e" name="Decision11" isLeaf="false">
+            <elementDefinition Id="ab285033-87c8-47f8-8660-b6c7af86041e" />
+            <flowNodeTargets>
+              <controlFlow Id="743f309c-137b-42af-97df-f7cf196cf8a5" guard="Pflichtfelder aufgefüllt " isLeaf="false">
+                <opaqueActionMoniker Id="f1235787-68bb-44fe-8b17-8bb59477d7e4" LastKnownName="Speichern der geänderten Daten " />
+                <elementDefinition Id="3272f3eb-8f87-4494-bcb0-0299797744f8" />
+              </controlFlow>
+              <controlFlow Id="bac9ebe0-4748-43df-9532-56fc9a30d78e" guard="1 Pflichtfeld = 0" isLeaf="false">
+                <opaqueActionMoniker Id="0d4234a0-4514-4a99-bb09-c7e34526def4" LastKnownName="Benachrichtigung, dass die geänderten Daten nicht gespeichert werden können " />
+                <elementDefinition Id="85dbab30-4aec-4648-a5e9-32957d3fd18d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="f1235787-68bb-44fe-8b17-8bb59477d7e4" name="Speichern der geänderten Daten " isLeaf="false">
+            <elementDefinition Id="9a5e968e-3aa4-44df-ac2a-9f8127d9374a" />
+            <flowNodeTargets>
+              <controlFlow Id="2c97a7f0-0805-4a64-892e-5690a8647dad" isLeaf="false">
+                <activityFinalNodeMoniker Id="c0f0a3f9-a3ab-47a0-b672-4fcd3e7df075" LastKnownName="ActivityFinal12" />
+                <elementDefinition Id="9dc409d4-d326-4933-915e-a507a24429e4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="0d4234a0-4514-4a99-bb09-c7e34526def4" name="Benachrichtigung, dass die geänderten Daten nicht gespeichert werden können " isLeaf="false">
+            <elementDefinition Id="534443be-23ae-41d8-bf68-95ba97e2a786" />
+            <flowNodeTargets>
+              <controlFlow Id="d0430e53-93c0-4fb3-9afa-dc4b5afe7823" isLeaf="false">
+                <opaqueActionMoniker Id="48ea9d9d-9a5a-45eb-bfa9-5b4e27fbfadf" LastKnownName="Alle Trainingseinheiten anzeigen und Bearbeitungsmöglichkeiten anbieten" />
+                <elementDefinition Id="2d9dfc4d-805a-472d-bb06-f4af10185603" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="d692bc58-8f81-4135-9775-265515d5e0df" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="2a1daa1f-3b37-43e6-a673-1fa9312347af" />
+          </activityFinalNode>
+          <activityFinalNode Id="2171e136-f942-4025-9254-0c7cc1d979ec" name="ActivityFinal11" isLeaf="false">
+            <elementDefinition Id="a8e42f43-6e42-4174-9d29-de3e9d76130f" />
+          </activityFinalNode>
+          <activityFinalNode Id="c0f0a3f9-a3ab-47a0-b672-4fcd3e7df075" name="ActivityFinal12" isLeaf="false">
+            <elementDefinition Id="312159eb-99cd-4653-8fa4-3fd823964d08" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="1d798984-2ac0-4ee5-ad00-f96fea90f7ba" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+  </package>
+</activityRootModel>

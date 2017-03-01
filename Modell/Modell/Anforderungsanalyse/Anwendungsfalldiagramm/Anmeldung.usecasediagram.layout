@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Anmeldung">
+  <useCaseModelRootMoniker Id="bda80921-65ce-492e-bc54-1aff10b624a2" />
+  <nestedChildShapes>
+    <actorShape Id="3c341d7a-1f29-4326-8a10-d86ab3d3d230" absoluteBounds="1.625, 2.125, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="02033602-c5a6-4f4f-8857-c688d0f78419" LastKnownName="Benutzer" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="67480746-b1d0-4d01-b477-14cb7625e108" absoluteBounds="3.5, 2.125, 1.75, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="f57b452e-34a7-4e17-a29b-5bbff8775e25" LastKnownName="Benutzer authentifizieren und autorisieren" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(2.125 : 2.3875); (3.50589475329867 : 2.45654473766493)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="9d28d49f-9b4d-458a-b46e-a13f8f4b938d" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="3c341d7a-1f29-4326-8a10-d86ab3d3d230" />
+        <useCaseShapeMoniker Id="67480746-b1d0-4d01-b477-14cb7625e108" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <rectangleShape Id="1fc15916-3d22-4606-a05d-efeb05f4b019" absoluteBounds="3.125, 2, 2.375, 1" outlineColor="83, 134, 191" outlineThickness="0.03125" />
+  </nestedChildShapes>
+</useCaseDiagram>

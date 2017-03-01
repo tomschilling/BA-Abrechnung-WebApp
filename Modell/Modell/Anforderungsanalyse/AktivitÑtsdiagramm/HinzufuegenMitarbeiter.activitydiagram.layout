@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MitarbeiterHinzufuegen">
+  <activityRootModelMoniker Id="1cdcaf57-296f-40de-91a6-9aceda9e6df2" />
+  <nestedChildShapes>
+    <objectNodeShape Id="a3a8a0d2-d7f3-4d56-b594-3a390ddd28ee" absoluteBounds="0.75, 0.625, 1.875, 0.375" customColor="White">
+      <objectNodeMoniker Id="cd881086-68d3-4976-b349-915379a31324" LastKnownName="Administrator" />
+    </objectNodeShape>
+    <objectNodeShape Id="f8eb670b-fb01-4ae1-815c-ec312b5cb5b3" absoluteBounds="2.625, 0.625, 4.625, 0.375" customColor="White">
+      <objectNodeMoniker Id="f89d7111-ba2c-4f76-ac31-8cff6fdac557" LastKnownName="System " />
+    </objectNodeShape>
+    <initialNodeShape Id="70a3f603-1cdc-47b7-858e-35d07754f686" absoluteBounds="5.875, 1.125, 0.125, 0.125" customColor="89, 89, 89">
+      <initialNodeMoniker Id="e87facc4-17b8-4da9-8c70-b0e02643eeb4" LastKnownName="Initial1" />
+    </initialNodeShape>
+    <actionShape Id="022a8b56-f8fb-4b44-a0fd-173862fa6536" absoluteBounds="5.125, 1.5, 1.75, 0.5" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="d6b52024-6043-42a3-abf0-20055a4d0e57" LastKnownName="Seite für Mitarbeiterdateneingabe anzeigen " />
+    </actionShape>
+    <actionShape Id="719cafa1-abdb-4019-8f1b-3cf43414e96f" absoluteBounds="0.875, 2.125, 1.375, 0.625" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="5b782872-f7fa-4908-88bd-f9b7230957e8" LastKnownName="Benutzername und Passwort des Mitarbeiters eingeben und speichern oder Beenden  " />
+    </actionShape>
+    <decisionNodeShape Id="55276825-4908-42ef-8ef5-ff600cc5d10b" absoluteBounds="3.625, 2.25, 0.375, 0.375" customColor="185, 212, 238">
+      <decisionNodeMoniker Id="f6ced253-cf61-4958-8d2a-3852d1f1cd2c" LastKnownName="Decision1" />
+      <relativeChildShapes />
+    </decisionNodeShape>
+    <actionShape Id="01919433-4d01-4ea4-9e16-eb8a1fd84075" absoluteBounds="3.25, 3, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="411faf18-8b44-4a25-8c85-bffc419f206b" LastKnownName="Beenden" />
+    </actionShape>
+    <activityFinalNodeShape Id="5a3da805-d677-4e43-a930-983ac0c16f7d" absoluteBounds="3.75, 3.75, 0.125, 0.125" customColor="89, 89, 89">
+      <activityFinalNodeMoniker Id="4e5a4328-abfc-4675-85aa-af943f3202c3" LastKnownName="ActivityFinal1" />
+    </activityFinalNodeShape>
+    <actionShape Id="362b09b2-2337-4e7a-97a8-3f7d08ac6511" absoluteBounds="5.125, 2.25, 1.75, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="b7baeb90-21e3-48df-92ec-8b3f49583d83" LastKnownName="Speichert Mitarbeiterdaten" />
+    </actionShape>
+    <controlFlowConnector edgePoints="[(5.9375 : 1.25); (5.9375 : 1.5)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <controlFlowMoniker Id="2ec8df04-7bad-4c10-a65b-6ec0f2ce24f0" />
+      <relativeChildShapes />
+      <nodes>
+        <initialNodeShapeMoniker Id="70a3f603-1cdc-47b7-858e-35d07754f686" />
+        <actionShapeMoniker Id="022a8b56-f8fb-4b44-a0fd-173862fa6536" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(5.125 : 1.75); (1.5625 : 1.75); (1.5625 : 2.125)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <controlFlowMoniker Id="a4394bde-bba7-4553-9ae6-8cb86185a3b1" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="022a8b56-f8fb-4b44-a0fd-173862fa6536" />
+        <actionShapeMoniker Id="719cafa1-abdb-4019-8f1b-3cf43414e96f" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(2.25 : 2.4375); (3.625 : 2.4375)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <controlFlowMoniker Id="ec322db1-c7f7-4df7-a259-aa5c41379025" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="719cafa1-abdb-4019-8f1b-3cf43414e96f" />
+        <decisionNodeShapeMoniker Id="55276825-4908-42ef-8ef5-ff600cc5d10b" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(3.8125 : 2.625); (3.8125 : 3)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <controlFlowMoniker Id="1c7d7fda-d3e9-4907-ab14-6af25f3a7c94" />
+      <relativeChildShapes />
+      <nodes>
+        <decisionNodeShapeMoniker Id="55276825-4908-42ef-8ef5-ff600cc5d10b" />
+        <actionShapeMoniker Id="01919433-4d01-4ea4-9e16-eb8a1fd84075" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(3.8125 : 3.375); (3.8125 : 3.75)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <controlFlowMoniker Id="586ac6b1-fd65-494d-a9fb-dd1a1e4211db" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="01919433-4d01-4ea4-9e16-eb8a1fd84075" />
+        <activityFinalNodeShapeMoniker Id="5a3da805-d677-4e43-a930-983ac0c16f7d" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(6 : 2.25); (6 : 2)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <controlFlowMoniker Id="355678d7-54e4-449e-aa32-6aa6ea18fe10" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="362b09b2-2337-4e7a-97a8-3f7d08ac6511" />
+        <actionShapeMoniker Id="022a8b56-f8fb-4b44-a0fd-173862fa6536" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(4 : 2.4375); (5.125 : 2.4375)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black">
+      <controlFlowMoniker Id="b6b87911-9f51-4efd-a4d5-1c95c3e8ddca" />
+      <relativeChildShapes />
+      <nodes>
+        <decisionNodeShapeMoniker Id="55276825-4908-42ef-8ef5-ff600cc5d10b" />
+        <actionShapeMoniker Id="362b09b2-2337-4e7a-97a8-3f7d08ac6511" />
+      </nodes>
+    </controlFlowConnector>
+    <rectangleShape Id="360990d2-a345-41a4-9065-7bd03985ae07" absoluteBounds="0.75, 1, 1.875, 3.125" outlineColor="Black" outlineThickness="0.01" />
+    <rectangleShape Id="9af16184-d9df-468f-9e66-6a04544583ec" absoluteBounds="2.625, 1, 4.625, 3.125" outlineColor="Black" outlineThickness="0.01" />
+  </nestedChildShapes>
+</activityDiagram>

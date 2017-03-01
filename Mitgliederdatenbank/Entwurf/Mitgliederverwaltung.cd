@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Controller">
+    <Position X="2.855" Y="0.5" Height="0.417" Width="1.513" />
+  </Comment>
+  <Comment CommentText="Model">
+    <Position X="5.573" Y="0.5" Height="0.417" Width="1.513" />
+  </Comment>
+  <Comment CommentText="Entity Framework">
+    <Position X="7.885" Y="0.5" Height="0.417" Width="1.513" />
+  </Comment>
+  <Comment CommentText="View">
+    <Position X="0.5" Y="0.5" Height="0.417" Width="1.513" />
+  </Comment>
+  <Comment CommentText="Views/Mitglieder/Index.aspx">
+    <Position X="0.5" Y="1.51" Height="0.75" Width="1.804" />
+  </Comment>
+  <Class Name="Mitgliederdatenbank.MitgliederController">
+    <Position X="2.5" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAACAAAACAQABIAAgAAAAAAAAABAAAAAUEACAAAIEA=</HashCode>
+      <FileName>Controllers\MitgliederController.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Mitgliederdatenbank.dbEntities">
+    <Position X="7.75" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEEAAABAAQAAAAAAACAAA=</HashCode>
+      <FileName>DataAccess\dbModel.Context.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mitgliederdatenbank.Mitglied">
+    <Position X="5.25" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IgACAAiQADACgAAAAgAAKAQAAAAAEAQAAAAAAQkAAQg=</HashCode>
+      <FileName>Models\Mitglied.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mitgliederdatenbank.MitgliederListe">
+    <Position X="5.25" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgEAAAAAEAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Models\MitgliederListe.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mitgliederdatenbank.Benutzer">
+    <Position X="5.25" Y="9.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAABAAgQAAAgAAAAAAAAAAAAAgAAAAwAAAAAAQACgAA=</HashCode>
+      <FileName>Models\Benutzer.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mitgliederdatenbank.Trainingseinheit">
+    <Position X="5.25" Y="13.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAAIAAgQAAEIABgAAAAFAAAAAIACgAQAGAAAAgAAAAA=</HashCode>
+      <FileName>Models\Trainingseinheit.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

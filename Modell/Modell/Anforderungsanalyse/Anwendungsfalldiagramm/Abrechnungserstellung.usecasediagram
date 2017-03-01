@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="ec129014-53d5-443f-aea1-91982e62a012" name="Abrechnungsprozess" linkedPackageId="e11b3d2e-3210-4439-9dc4-5c85d0abc257" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="8960432d-4e24-4a00-905a-806f2068ab9f" name="Mitarbeiter" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3c917cd5-5754-4cdd-98b6-1b6d5baa9870" />
+        <targetEnds>
+          <association Id="293b17e2-8ae3-4e26-8a42-2da06eee981a" isDerived="false" sourceEndRoleName="Mitarbeiter" targetEndRoleName="Mitglieder einsehen und ggf. neu anlegen" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6c68c13f-cd33-4262-8a3a-3fb545e5e55f" LastKnownName="Trainingseinheiten des ausgewählten Mitglieds einsehen " />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0309ad24-4f8c-41db-a2f9-d0fbad20d99b" name="Mitarbeiter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4bd13a50-366d-4afa-98ba-50c0548c243e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="40b807ed-57fc-41e1-bf2f-98d7e97cf7fb" name="Mitglieder einsehen und ggf. neu anlegen" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7e414b99-5d3a-40ee-8370-7db804900ead" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ecab68f6-ab74-4dba-bc19-69fdacb0aa62" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6c68c13f-cd33-4262-8a3a-3fb545e5e55f" name="Trainingseinheiten des ausgewählten Mitglieds einsehen " isAbstract="false" isLeaf="false">
+        <elementDefinition Id="847d875f-056e-41e8-8131-2f73f698c3b3" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="faaf5465-8338-4504-8f98-08243a21d84c" name="Monatsabrechnung erstellen" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ce529689-64a1-4397-90f7-993ef28d5bb4" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="daef8598-f09a-4c02-9598-0dc6bac08526" name="Vorgesetzter" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3383faad-d7a1-41cf-b6b6-381d1dcf460d" />
+        <generalsInternal>
+          <generalization Id="fda4929a-ed18-4891-be18-11e11b81425d" isSubstitutable="false">
+            <actorMoniker Id="8960432d-4e24-4a00-905a-806f2068ab9f" LastKnownName="Mitarbeiter" />
+            <elementDefinition Id="0cae731d-9c07-476f-b196-b7d8fb4e4094" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="6e40def5-88d9-4120-8c77-ac9b5d9b7082" isDerived="false" sourceEndRoleName="Geschäftführer" targetEndRoleName="Monatsabrechnung erstellen" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="faaf5465-8338-4504-8f98-08243a21d84c" LastKnownName="Monatsabrechnung erstellen" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fb2f15c7-9abc-48db-aa22-bafaa46e1e8f" name="Geschäftführer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="50d000d2-ce41-40d9-a0a1-6bd57f27c88c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d249d40c-344b-4eca-bf42-fd9a3d0b691f" name="Monatsabrechnung erstellen" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="82df0dde-3b97-4a84-b0b4-6f91f8d48dcc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="60e3e16a-2c69-41b5-87ad-c977865b952b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ca8328d9-4f8e-47f5-8eac-7d450625cf5c" name="Trainingseinheiten des ausgewählten Mitglieds bearbeiten oder löschen" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="244b0046-221d-422f-b184-495f61d56c3b" />
+        <additions>
+          <include Id="dc88b484-4c99-4d54-9e0e-df33812d8fbb">
+            <useCaseMoniker Id="6c68c13f-cd33-4262-8a3a-3fb545e5e55f" LastKnownName="Trainingseinheiten des ausgewählten Mitglieds einsehen " />
+            <elementDefinition Id="4f226f37-6744-4721-bdba-96116d793790" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="e11b3d2e-3210-4439-9dc4-5c85d0abc257" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+    <profileInstances>
+      <packageHasProfileInstances Id="853645ee-df70-45fe-99b1-cc756ca15fe7">
+        <profileInstance Id="ad865631-de8c-4aa0-a3e9-511d54749977" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="05025d29-b7b8-4f40-a88f-6fc5b7840e42">
+        <profileInstance Id="c1fa95e2-c09f-434f-ad51-33ea5ec6f415" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

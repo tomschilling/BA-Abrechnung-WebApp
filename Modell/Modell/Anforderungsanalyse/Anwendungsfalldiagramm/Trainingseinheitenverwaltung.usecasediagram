@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="b54a88c6-e117-464d-a67d-cfeecb636c2e" name="Trainingseinheitenerfassung" linkedPackageId="27d2d1fd-a788-4a97-a73e-fad6c5f0b2b3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="5faded42-fcd3-40d1-8802-210e3e6160e4" name="Mitarbeiter" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8c6a4ac9-228b-4921-a3c0-a4a9d26c636f" />
+        <targetEnds>
+          <association Id="aa48d5c1-92d2-47db-a2e0-046c2327f04c" isDerived="false" sourceEndRoleName="Mitarbeiter" targetEndRoleName="Mitglieder einsehen und ggf. neu anlegen" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="60286afe-f101-47aa-9775-9d7d3cec8439" LastKnownName="Trainingseinheiten einsehen und ggf. neu anlegen" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="111301bf-fc31-4a5b-99f9-381348b4470c" name="Mitarbeiter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d46024d2-b1a1-4388-bd4a-6d48160fd628" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3dcc23fe-b1f7-4526-b3d3-a2c896c85d71" name="Mitglieder einsehen und ggf. neu anlegen" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7478d7a5-a431-484f-ae9b-8bcbf67f8512" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="32689cd8-3757-42a3-bd3e-d910e68fcd6b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="60286afe-f101-47aa-9775-9d7d3cec8439" name="Trainingseinheiten einsehen und ggf. neu anlegen" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="107bb1c4-78f5-4cfe-a80a-8ab607d45e1c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="de4b1c74-eb5e-4d91-9775-19030a4413ff" name="Trainingseinheiten bearbeiten oder löschen" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a89d38d9-58ce-4b5d-9e2b-fda1a9efd710" />
+        <additions>
+          <include Id="402d70dd-c8e7-4853-b729-d46d40e67e10">
+            <useCaseMoniker Id="60286afe-f101-47aa-9775-9d7d3cec8439" LastKnownName="Trainingseinheiten einsehen und ggf. neu anlegen" />
+            <elementDefinition Id="aaf2d3c4-3bc6-4eac-8a23-65ee4b1341cd" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="27d2d1fd-a788-4a97-a73e-fad6c5f0b2b3" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+    <profileInstances>
+      <packageHasProfileInstances Id="2bb1d5ff-bfe9-4bf7-a903-b4cc2a89b08b">
+        <profileInstance Id="e344c8c0-1e89-4167-8037-4fc0212e3422" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="acb212f6-2333-41a5-8314-d3442f605cea">
+        <profileInstance Id="7da9b40c-2dc5-4e6f-b4c2-5ed4d1b5f0d5" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

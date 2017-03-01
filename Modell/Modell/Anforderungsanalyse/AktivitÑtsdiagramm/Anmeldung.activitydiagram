@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="ebaa1cad-de51-43cd-9d38-630d95a04716" name="Anmeldung" linkedPackageId="995baab6-d79c-4bac-92db-f494efc042de" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="8f82feb1-8ffc-4fec-963a-ecd9471c452b">
+      <elementDefinition Id="9b8edc38-ec2d-4823-b129-6c096fc7c55b" />
+      <body>Abbruch</body>
+    </comment>
+    <comment Id="059f6f78-bdd1-458e-8574-78bf492cb88a">
+      <elementDefinition Id="8c59d3ea-5d2d-423f-b5c3-66996c69237b" />
+      <body>Anmeldung erfolgreich</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="627d8ac9-d60f-4b2e-bf55-0abd56c14ea9" name="Anmeldung" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="7b34d805-f313-447e-8962-7ba8d7c05e26" />
+        <nodes>
+          <objectNode Id="bec6900e-cd4d-4bca-9792-9066505058bf" name="Benutzer" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="7331ea57-19c8-4995-8893-d5b28630831d" />
+            <upperBound>
+              <literalInteger Id="313d8467-c9eb-4c36-89ce-2b367d4c7ca5" name="2147483647" value="2147483647">
+                <elementDefinition Id="ebc2b834-ab1e-437b-80ee-847def7bddf1" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="90298a67-2c49-431b-90fc-260dcbc91b84" name="System" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="ff7c09d0-f686-41d9-8ffe-f3789878c463" />
+            <upperBound>
+              <literalInteger Id="a0769270-ac62-419e-b35e-e20b721c1f94" name="2147483647" value="2147483647">
+                <elementDefinition Id="d699f1a1-fd37-496c-9109-8a9c76340bd1" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <initialNode Id="617e4a5a-d909-4713-945f-915228a97ca8" name="Initial1" isLeaf="false">
+            <elementDefinition Id="e9cfcf31-a7fd-4ef6-bc57-c34af6332a6b" />
+            <flowNodeTargets>
+              <controlFlow Id="3107e099-34a1-4591-8d62-898496cd889f" isLeaf="false">
+                <opaqueActionMoniker Id="663c94bc-0027-4afe-b85d-d92a4882dcc8" LastKnownName="Erfragen der Anmeldeinformationen" />
+                <elementDefinition Id="d1bd312e-f1e3-4ec8-8376-083ff6c019b7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="663c94bc-0027-4afe-b85d-d92a4882dcc8" name="Erfragen der Anmeldeinformationen" isLeaf="false">
+            <elementDefinition Id="cc31d98e-7eab-4b9f-9cad-24cfd8b7183e" />
+            <flowNodeTargets>
+              <controlFlow Id="cd4e2c05-57cf-427a-bf33-9271cff94017" isLeaf="false">
+                <opaqueActionMoniker Id="926ebf8e-bd01-4da9-b8c8-2e5ed098fb34" LastKnownName="Benutzer gibt Anmeldeinformationen ein oder bricht ab " />
+                <elementDefinition Id="20966253-c6bd-4a47-bcb6-798ff38633ed" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="926ebf8e-bd01-4da9-b8c8-2e5ed098fb34" name="Benutzer gibt Anmeldeinformationen ein oder bricht ab " isLeaf="false">
+            <elementDefinition Id="c0f5a607-6e7f-451a-a379-b240c36fff86" />
+            <flowNodeTargets>
+              <controlFlow Id="7ed77069-2878-44fa-91ba-bc43f70c653b" isLeaf="false">
+                <decisionNodeMoniker Id="4e3e5b40-b1ff-4ab8-8118-e49c97eb642a" LastKnownName="Decision1" />
+                <elementDefinition Id="3a66cce4-c7f5-4491-ba32-cde275323250" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="4e3e5b40-b1ff-4ab8-8118-e49c97eb642a" name="Decision1" isLeaf="false">
+            <elementDefinition Id="0434f839-9c72-4058-81e2-406f3543ac7e" />
+            <flowNodeTargets>
+              <controlFlow Id="008cca29-ab6a-4717-8f10-42de5ec0bfac" guard="Abbrechen" isLeaf="false">
+                <opaqueActionMoniker Id="a1648c68-89a6-4b26-807e-2c3606ef6c4e" LastKnownName="Beenden" />
+                <elementDefinition Id="e17698ab-00a5-425f-a252-7faa7a532072" />
+              </controlFlow>
+              <controlFlow Id="f9c1d256-c6ea-41ce-b654-a18dbd1b40fa" guard="Anmelden" isLeaf="false">
+                <opaqueActionMoniker Id="18bab917-a5a8-4561-a710-1d9fcf882ba7" LastKnownName="Anmeldeinformationen&#xD;&#xA;prüfen" />
+                <elementDefinition Id="3362c769-0c72-4f03-8440-22074e9674d8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="a1648c68-89a6-4b26-807e-2c3606ef6c4e" name="Beenden" isLeaf="false">
+            <elementDefinition Id="02b30d28-a892-4926-8de7-3965eec0c374" />
+            <flowNodeTargets>
+              <controlFlow Id="32c84e8e-2a79-4eb9-af82-203b268f2e35" isLeaf="false">
+                <activityFinalNodeMoniker Id="35b33e75-6253-4cc3-9765-84148fa8206c" LastKnownName="ActivityFinal2" />
+                <elementDefinition Id="a0c85f23-fe93-47c8-aa1c-37c5d208669c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="18bab917-a5a8-4561-a710-1d9fcf882ba7" name="Anmeldeinformationen&#xD;&#xA;prüfen" isLeaf="false">
+            <elementDefinition Id="aeddb10a-e293-46b0-a233-57041113dcda" />
+            <flowNodeTargets>
+              <controlFlow Id="42f98779-d0a5-4af1-aaad-1e0a49b94c48" isLeaf="false">
+                <decisionNodeMoniker Id="8fd57245-8841-4ac8-9893-0eedbd1fb552" LastKnownName="Decision2" />
+                <elementDefinition Id="1d4f1127-12ae-4d76-9ae1-7d5bb8878442" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="8fd57245-8841-4ac8-9893-0eedbd1fb552" name="Decision2" isLeaf="false">
+            <elementDefinition Id="9e10c948-6caf-4899-8923-ec5b5dcc5de2" />
+            <flowNodeTargets>
+              <controlFlow Id="d6b59a1f-e819-46b8-9b45-b2015ddb22e8" guard="Anmeldeinformationen falsch" isLeaf="false">
+                <opaqueActionMoniker Id="663c94bc-0027-4afe-b85d-d92a4882dcc8" LastKnownName="Erfragen der Anmeldeinformationen" />
+                <elementDefinition Id="46c8b7da-31db-4923-81e0-72f75b89abf3" />
+              </controlFlow>
+              <controlFlow Id="074e999a-4b2c-46c7-bd1c-ef3c5acb8212" guard="Anmeldeinformationen richtig" isLeaf="false">
+                <opaqueActionMoniker Id="1f0627ba-dd87-4ef5-a243-42b9586d4200" LastKnownName="Prüfung ob Mitarbeiter, Vorgesetzter oder Administrator" />
+                <elementDefinition Id="11565ace-b5d1-48fa-a22f-aaee2da7f6fd" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode Id="35b33e75-6253-4cc3-9765-84148fa8206c" name="ActivityFinal2" isLeaf="false">
+            <elementDefinition Id="78148ea9-b7ab-44cc-951f-6fcd4af39aa7" />
+          </activityFinalNode>
+          <opaqueAction Id="1f0627ba-dd87-4ef5-a243-42b9586d4200" name="Prüfung ob Mitarbeiter, Vorgesetzter oder Administrator" isLeaf="false">
+            <elementDefinition Id="84bf7b45-e3d0-4e93-bb4d-78a11a49cb9e" />
+            <flowNodeTargets>
+              <controlFlow Id="9200be0d-c442-4d05-8e79-6fe379a873fe" isLeaf="false">
+                <activityFinalNodeMoniker Id="ce8bd2e0-243a-404d-ba4d-d226b6f1db02" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="e2c4539b-6316-42ab-857e-45983b409548" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="ce8bd2e0-243a-404d-ba4d-d226b6f1db02" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="ff03248f-6f49-435b-a928-fc77e0f08828" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="995baab6-d79c-4bac-92db-f494efc042de" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+    <profileInstances>
+      <packageHasProfileInstances Id="60cf9df5-07c2-4cd7-9a10-b0b74df48284">
+        <profileInstance Id="ea085ec0-8ff6-488a-8ac9-7c86d56e6986" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="8bc517f2-d059-428c-801b-e76114cbe657">
+        <profileInstance Id="248ff944-1ad9-453e-a955-21031ca782d7" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

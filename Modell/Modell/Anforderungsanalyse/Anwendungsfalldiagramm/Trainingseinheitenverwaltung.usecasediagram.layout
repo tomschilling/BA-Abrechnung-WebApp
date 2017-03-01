@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Trainingseinheitenerfassung">
+  <useCaseModelRootMoniker Id="b54a88c6-e117-464d-a67d-cfeecb636c2e" />
+  <nestedChildShapes>
+    <actorShape Id="87ac1547-aa88-42c3-8506-fd85ec703bef" absoluteBounds="1.5, 1.25, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="5faded42-fcd3-40d1-8802-210e3e6160e4" LastKnownName="Mitarbeiter" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="590fd71f-dfba-4fd2-ab02-2ddca46b6f87" absoluteBounds="2.5, 1.25, 1.75, 0.625" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="60286afe-f101-47aa-9775-9d7d3cec8439" LastKnownName="Trainingseinheiten einsehen und ggf. neu anlegen" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(2 : 1.50961538461538); (2.5050302522754 : 1.52903962508752)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="aa48d5c1-92d2-47db-a2e0-046c2327f04c" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="87ac1547-aa88-42c3-8506-fd85ec703bef" />
+        <useCaseShapeMoniker Id="590fd71f-dfba-4fd2-ab02-2ddca46b6f87" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="0ff2e588-9647-4d07-8f04-d8b14da20f39" absoluteBounds="3.875, 2.375, 1.75, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="de4b1c74-eb5e-4d91-9775-19030a4413ff" LastKnownName="Trainingseinheiten bearbeiten oder löschen" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <includeConnector edgePoints="[(4.36104716888673 : 2.41408619131127); (3.70937881670021 : 1.851281705332)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="Black" useCaseStereotype="«Einschließen»">
+      <includeMoniker Id="402d70dd-c8e7-4853-b729-d46d40e67e10" />
+      <relativeChildShapes />
+      <nodes>
+        <useCaseShapeMoniker Id="0ff2e588-9647-4d07-8f04-d8b14da20f39" />
+        <useCaseShapeMoniker Id="590fd71f-dfba-4fd2-ab02-2ddca46b6f87" />
+      </nodes>
+    </includeConnector>
+    <rectangleShape Id="bba84e87-fcbc-477f-a5a6-30cf19ce0581" absoluteBounds="2.25, 1, 3.625, 2.375" outlineColor="83, 134, 191" outlineThickness="0.03125" />
+  </nestedChildShapes>
+</useCaseDiagram>

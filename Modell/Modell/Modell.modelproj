@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3ddae18b-3f2c-405b-acc6-810f44f393d7}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>Modell</Name>
+    <RootNamespace>Modell</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="Analyse\Aktivitätsdiagramme\Abrechnungserstellung.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Analyse\Aktivitätsdiagramme\Abrechnungserstellung.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Analyse\Aktivitätsdiagramme\Abrechnungserstellung.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Analyse\Aktivitätsdiagramme\MitgliedBearbeiten.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Analyse\Aktivitätsdiagramme\MitgliedBearbeiten.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Analyse\Aktivitätsdiagramme\MitgliedBearbeiten.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Analyse\Aktivitätsdiagramme\Mitgliederverwaltung.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Analyse\Aktivitätsdiagramme\Mitgliederverwaltung.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Analyse\Aktivitätsdiagramme\Mitgliederverwaltung.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Analyse\Aktivitätsdiagramme\MitgliedLoeschen.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Analyse\Aktivitätsdiagramme\MitgliedLoeschen.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Analyse\Aktivitätsdiagramme\MitgliedLoeschen.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Analyse\Klassendiagramme\Abrechnungserstellung2.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Analyse\Klassendiagramme\Abrechnungserstellung2.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Analyse\Klassendiagramme\Abrechnungserstellung2.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Analyse\Klassendiagramme\Abrechnunserstellung.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Analyse\Klassendiagramme\Abrechnunserstellung.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Analyse\Klassendiagramme\Abrechnunserstellung.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Analyse\Klassendiagramme\Mitgliederverwaltung.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Analyse\Klassendiagramme\Mitgliederverwaltung.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Analyse\Klassendiagramme\Mitgliederverwaltung.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Analyse\Klassendiagramme\Organisation.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Analyse\Klassendiagramme\Organisation.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Analyse\Klassendiagramme\Organisation.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Analyse\Klassendiagramme\Pakete.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Analyse\Klassendiagramme\Pakete.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Analyse\Klassendiagramme\Pakete.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\Anmeldung.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\Anmeldung.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Aktivitätsdiagramm\Anmeldung.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\BearbeitenLoeschenMitarbeiterdaten.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\BearbeitenLoeschenMitarbeiterdaten.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Aktivitätsdiagramm\BearbeitenLoeschenMitarbeiterdaten.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\BearbeitenLoeschenMitgliedsdaten.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\BearbeitenLoeschenMitgliedsdaten.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Aktivitätsdiagramm\BearbeitenLoeschenMitgliedsdaten.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\BearbeitenLoeschenTrainingseinheit.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\BearbeitenLoeschenTrainingseinheit.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Aktivitätsdiagramm\BearbeitenLoeschenTrainingseinheit.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\ErstellenAbrechnung.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\ErstellenAbrechnung.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Aktivitätsdiagramm\ErstellenAbrechnung.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\HinzufuegenMitarbeiter.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\HinzufuegenMitarbeiter.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Aktivitätsdiagramm\HinzufuegenMitarbeiter.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\HinzufuegenMitglied.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\HinzufuegenMitglied.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Aktivitätsdiagramm\HinzufuegenMitglied.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\HinzufuegenTrainingseinheit.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\HinzufuegenTrainingseinheit.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Aktivitätsdiagramm\HinzufuegenTrainingseinheit.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\PasswortVergessen.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Aktivitätsdiagramm\PasswortVergessen.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Aktivitätsdiagramm\PasswortVergessen.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Mitgliederdatenbank.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Mitgliederdatenbank.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Mitgliederdatenbank.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Dialogflussdiagramm\AbrechnungserstellungStateChart.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Dialogflussdiagramm\AbrechnungserstellungStateChart.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Dialogflussdiagramm\AbrechnungserstellungStateChart.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Dialogflussdiagramm\Anmeldung.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Dialogflussdiagramm\Anmeldung.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Dialogflussdiagramm\Anmeldung.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Dialogflussdiagramm\MitarbeiterverwaltungStateChart.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Dialogflussdiagramm\MitarbeiterverwaltungStateChart.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Dialogflussdiagramm\MitarbeiterverwaltungStateChart.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Dialogflussdiagramm\MitgliederverwaltungStateChart.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Dialogflussdiagramm\MitgliederverwaltungStateChart.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Dialogflussdiagramm\MitgliederverwaltungStateChart.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Dialogflussdiagramm\TrainingseinheitenverwaltungStateChart.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Dialogflussdiagramm\TrainingseinheitenverwaltungStateChart.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Dialogflussdiagramm\TrainingseinheitenverwaltungStateChart.activitydiagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Anwendungsfalldiagramm\Abrechnungserstellung.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Anwendungsfalldiagramm\Abrechnungserstellung.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Anwendungsfalldiagramm\Abrechnungserstellung.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Anwendungsfalldiagramm\Mitarbeiterverwaltung.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Anwendungsfalldiagramm\Mitarbeiterverwaltung.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Anwendungsfalldiagramm\Mitarbeiterverwaltung.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Anwendungsfalldiagramm\Anmeldung.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Anwendungsfalldiagramm\Anmeldung.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Anwendungsfalldiagramm\Anmeldung.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Anwendungsfalldiagramm\Mitgliederverwaltung.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Anwendungsfalldiagramm\Mitgliederverwaltung.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Anwendungsfalldiagramm\Mitgliederverwaltung.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Anforderungsanalyse\Anwendungsfalldiagramm\Trainingseinheitenverwaltung.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Anforderungsanalyse\Anwendungsfalldiagramm\Trainingseinheitenverwaltung.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Anforderungsanalyse\Anwendungsfalldiagramm\Trainingseinheitenverwaltung.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1212.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1206.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1207.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1212.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1214.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Folder Include="Analyse\Klassendiagramme" />
+    <Folder Include="Analyse\Aktivitätsdiagramme" />
+    <Folder Include="Anforderungsanalyse\Aktivitätsdiagramm" />
+    <Folder Include="Anforderungsanalyse\Dialogflussdiagramm" />
+    <Folder Include="Anforderungsanalyse\Anwendungsfalldiagramm" />
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\Modell.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Folder Include="Anforderungsanalyse" />
+    <Folder Include="Analyse" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="077587a5-d200-44ba-8800-5033772136c6" name="Anmeldung" linkedPackageId="01fcfef4-0877-4b85-bce4-85a07c599db3" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="0497266a-b30e-43d1-9970-2d7b9661ae6f">
+      <profileInstance Id="3cdf422f-a0d0-4827-a219-2bb82fd8fda0" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="7e8a6c01-9f35-45d9-8f10-54f021a2f74c">
+      <profileInstance Id="2d6d518f-ab25-476c-a62f-5b575ca8a002" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="fc4d844a-1075-4716-b677-533f7dfa3925" name="Anmeldung" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="7ed08c12-5c36-4385-8bbc-4329e2e78281" />
+        <nodes>
+          <objectNode Id="e6268456-7490-4e4b-91be-5799b66f8cc6" name="Anmeldung" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="258e961f-5f58-4291-89cc-ac834ca0a898" />
+            <objectFlowTargets>
+              <objectFlow Id="bc1b9b86-f7d5-4e1e-9008-8cd5b45d2ca8" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="5f84bae5-2ebf-4fe7-a72a-e6a093f0060e" LastKnownName="Abbrechen" />
+                <elementDefinition Id="cea00b45-4e88-4d30-b1fb-44cf371bbaa6" />
+              </objectFlow>
+              <objectFlow Id="06ab2cbe-8986-419e-9ec0-0ab625e90fb8" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="d1969491-6df5-47ae-bbfc-e8ee5da00221" LastKnownName="anmelden" />
+                <elementDefinition Id="87023618-0ebb-4bda-886a-2a55ec550ffd" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="fc0868ed-54a0-44ca-93d5-ae0676d5c0b4" name="2147483647" value="2147483647">
+                <elementDefinition Id="a1dbee61-ddb5-417f-8a2c-1fdacaea14a5" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="5f84bae5-2ebf-4fe7-a72a-e6a093f0060e" name="Abbrechen" isLeaf="false">
+            <elementDefinition Id="c25061c3-d678-4ffd-8eca-3893052a3a91" />
+            <flowNodeTargets>
+              <controlFlow Id="abf98c8f-d4cb-443b-aff7-8a80929c1cac" isLeaf="false">
+                <activityFinalNodeMoniker Id="0f818ad6-014f-49e9-bb02-69a2e1c6c224" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="5bf6c752-a92f-4844-abb5-9d69d7a47633" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="d1969491-6df5-47ae-bbfc-e8ee5da00221" name="anmelden" isLeaf="false">
+            <elementDefinition Id="9042449f-9ce8-44ef-9456-3929a1575b8c" />
+            <objectFlowTargets>
+              <objectFlow Id="b7d26765-5771-49a3-adee-f1adff499684" guard="nicht erfolgreich" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="e6268456-7490-4e4b-91be-5799b66f8cc6" LastKnownName="Anmeldung" />
+                <elementDefinition Id="f99356a9-c1f9-4e92-be47-12f863272ab8" />
+              </objectFlow>
+              <objectFlow Id="51ee1847-44a7-4b6e-b566-a73842db5bb4" guard="erfolgreich" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="6456f631-0b8e-47fc-8e06-733cd36b3c08" LastKnownName="Trainingseinheiten" />
+                <elementDefinition Id="f12b8d8b-d968-41e9-8302-edbaaf7209aa" />
+              </objectFlow>
+            </objectFlowTargets>
+          </opaqueAction>
+          <initialNode Id="ebf048d3-7518-4463-b9d0-0485fd0f8490" name="Initial1" isLeaf="false">
+            <elementDefinition Id="ea9f4e30-9e00-45ac-b3c4-3b77b1eb84f5" />
+            <objectFlowTargets>
+              <objectFlow Id="7129f474-9059-4015-b7f3-3704842af199" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="e6268456-7490-4e4b-91be-5799b66f8cc6" LastKnownName="Anmeldung" />
+                <elementDefinition Id="07ed75a0-6e40-45ec-bac3-849ebb667bfc" />
+              </objectFlow>
+            </objectFlowTargets>
+          </initialNode>
+          <activityFinalNode Id="0f818ad6-014f-49e9-bb02-69a2e1c6c224" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="ada31aef-32ef-4ca7-8dea-22a95cd52a60" />
+          </activityFinalNode>
+          <objectNode Id="6456f631-0b8e-47fc-8e06-733cd36b3c08" name="Trainingseinheiten" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="2e91a663-b4c5-4e72-90a1-504d616cc3ad" />
+            <upperBound>
+              <literalInteger Id="a4f8fea3-e36a-4931-861e-ac30babe9fb8" name="2147483647" value="2147483647">
+                <elementDefinition Id="46881cfa-63b9-46cb-9f96-bb297a75f3e5" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="01fcfef4-0877-4b85-bce4-85a07c599db3" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+  </package>
+</activityRootModel>

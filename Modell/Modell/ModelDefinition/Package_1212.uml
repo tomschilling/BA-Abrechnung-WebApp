@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="51053fbb-cfbc-434e-ae32-56d9dbc20c97"
+  name="Monatsabrechnung" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <suppliersInternal>
+    <dependency
+      Id="95658762-53a0-46a2-b2dd-cd5d4d60dff2">
+      <packageMoniker
+        Id="6a490eb7-589a-45b5-bbfc-0dfe3eae2e65"
+        LastKnownName="Organisation"
+        LastKnownLocation="Package1_1212.uml" />
+    </dependency>
+    <dependency
+      Id="c4632df6-add1-4ffb-8350-4c486cd61f73">
+      <packageMoniker
+        Id="6e80835f-605b-4997-a94a-d5d505af15cb"
+        LastKnownName="Organisation"
+        LastKnownLocation="Package_1214.uml" />
+    </dependency>
+  </suppliersInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6a490eb7-589a-45b5-bbfc-0dfe3eae2e65"
+        LastKnownName="Organisation"
+        LastKnownLocation="Package1_1212.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

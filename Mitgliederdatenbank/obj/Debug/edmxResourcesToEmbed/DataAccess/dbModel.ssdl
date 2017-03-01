@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="dbModelStoreContainer">
+    <EntitySet Name="tblBenutzer" EntityType="dbModel.Store.tblBenutzer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblMitglieder" EntityType="dbModel.Store.tblMitglieder" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tblTrainingseinheiten" EntityType="dbModel.Store.tblTrainingseinheiten" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_tblTrainingseinheiten_tblBenutzer" Association="dbModel.Store.FK_tblTrainingseinheiten_tblBenutzer">
+      <End Role="tblBenutzer" EntitySet="tblBenutzer" />
+      <End Role="tblTrainingseinheiten" EntitySet="tblTrainingseinheiten" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTrainingseinheiten_tblMitglieder" Association="dbModel.Store.FK_tblTrainingseinheiten_tblMitglieder">
+      <End Role="tblMitglieder" EntitySet="tblMitglieder" />
+      <End Role="tblTrainingseinheiten" EntitySet="tblTrainingseinheiten" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tblBenutzer">
+    <Key>
+      <PropertyRef Name="benIdPK" />
+    </Key>
+    <Property Name="benIdPK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="benName" Type="varchar" MaxLength="25" />
+    <Property Name="benPasswort" Type="varchar" MaxLength="25" />
+    <Property Name="benVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="benIstAdmin" Type="bit" />
+    <Property Name="benIstVorgesetzter" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblMitglieder">
+    <Key>
+      <PropertyRef Name="mitIdPk" />
+    </Key>
+    <Property Name="mitIdPk" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="mitName" Type="varchar" MaxLength="25" />
+    <Property Name="mitVorname" Type="varchar" MaxLength="25" />
+    <Property Name="mitStraßeNr" Type="varchar" MaxLength="50" />
+    <Property Name="mitPlzOrt" Type="varchar" MaxLength="50" />
+    <Property Name="mitTel" Type="varchar" MaxLength="50" />
+    <Property Name="mitEmail" Type="varchar" MaxLength="50" />
+    <Property Name="mitGebDatum" Type="datetime" />
+    <Property Name="mitMtglDatum" Type="datetime" />
+    <Property Name="mitVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="tblTrainingseinheiten">
+    <Key>
+      <PropertyRef Name="trainIdPk" />
+    </Key>
+    <Property Name="trainIdPk" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="trainMitIdFk" Type="int" />
+    <Property Name="trainBenIdFk" Type="int" />
+    <Property Name="trainDatum" Type="datetime" />
+    <Property Name="trainVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <Association Name="FK_tblTrainingseinheiten_tblBenutzer">
+    <End Role="tblBenutzer" Type="dbModel.Store.tblBenutzer" Multiplicity="0..1" />
+    <End Role="tblTrainingseinheiten" Type="dbModel.Store.tblTrainingseinheiten" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBenutzer">
+        <PropertyRef Name="benIdPK" />
+      </Principal>
+      <Dependent Role="tblTrainingseinheiten">
+        <PropertyRef Name="trainBenIdFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTrainingseinheiten_tblMitglieder">
+    <End Role="tblMitglieder" Type="dbModel.Store.tblMitglieder" Multiplicity="0..1" />
+    <End Role="tblTrainingseinheiten" Type="dbModel.Store.tblTrainingseinheiten" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMitglieder">
+        <PropertyRef Name="mitIdPk" />
+      </Principal>
+      <Dependent Role="tblTrainingseinheiten">
+        <PropertyRef Name="trainMitIdFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

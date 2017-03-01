@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="957f7fb0-5892-49da-9346-c596dcddb3cc" name="Mitgliedererfassung" linkedPackageId="d3381db9-d090-431e-b98f-9730a0acb22f" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="63f073cc-9ab3-445b-a84a-acb421974a67" name="Mitarbeiter" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b52c80ec-c214-4f11-bf1a-9bc88a689c11" />
+        <targetEnds>
+          <association Id="0d94d384-ec07-429e-80ba-757e6b068dab" isDerived="false" sourceEndRoleName="Mitarbeiter" targetEndRoleName="Mitglieder einsehen und ggf. neu anlegen" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="fdbb19dd-1b3d-4077-8b62-3ac65fc3b20b" LastKnownName="Mitglieder einsehen und ggf. neu anlegen" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5ca92727-fa90-4f16-ac27-062701cec821" name="Mitarbeiter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8b39d7c1-68fc-4a9e-b130-b63ab9d4e168" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0b927d6a-3436-4b56-b952-7cee180cbdae" name="Mitglieder einsehen und ggf. neu anlegen" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b894e9e1-6e37-42f0-a011-67b6e96568cb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a9a93202-307b-48fd-afd0-d7fdeb23bc06" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fdbb19dd-1b3d-4077-8b62-3ac65fc3b20b" name="Mitglieder einsehen und ggf. neu anlegen" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="85872abe-25f3-4475-8b80-3b7e95fdbdf8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d11e0cf2-b14b-4124-9940-f07c92467417" name="Mitglieder bearbeiten oder löschen" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5c10d1df-4e99-4763-b0d3-e61ff3f70b81" />
+        <additions>
+          <include Id="8da478fe-1080-46a0-bbe9-d4201b95de29">
+            <useCaseMoniker Id="fdbb19dd-1b3d-4077-8b62-3ac65fc3b20b" LastKnownName="Mitglieder einsehen und ggf. neu anlegen" />
+            <elementDefinition Id="8daead5c-5545-411d-b234-509b76c706cf" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="d3381db9-d090-431e-b98f-9730a0acb22f" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+    <profileInstances>
+      <packageHasProfileInstances Id="a89826f4-40b9-4347-b53b-f3d4e4c5c75b">
+        <profileInstance Id="7d23a411-0800-4de4-917c-449a694f0bb6" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="11dc5506-a554-4479-9332-7f8249a67b3a">
+        <profileInstance Id="62c430d1-f736-4104-8d6a-553059a179a1" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="50c40b02-a1c1-4816-b5fb-738cb384b7a9" name="MitgliedLoeschen" linkedPackageId="8854082d-8447-4b21-8442-a1c345194815" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="e10855c8-57c5-43f6-ad3d-91cb22bab320">
+      <elementDefinition Id="d595a6d6-b326-4e87-81ae-afadd243eabf" />
+      <body>Löschvorgang wurde abgebrochen</body>
+      <annotatedElements>
+        <activityFinalNodeMoniker Id="019437ff-4cea-44d0-80f6-0cbdcd05a80c" LastKnownName="ActivityFinal2" />
+      </annotatedElements>
+    </comment>
+    <comment Id="52b5f954-613c-4f18-b789-776b748af915">
+      <elementDefinition Id="e04f680a-fa33-455a-8425-8eef520f45ec" />
+      <body>Mitglied ist gelöscht</body>
+      <annotatedElements>
+        <activityFinalNodeMoniker Id="a6df7afa-be39-4b91-83bf-f130016cdb23" LastKnownName="ActivityFinal1" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <referencedType Id="81924fb2-b495-48c2-8e43-7e4122684821" name="AlleMitgliederVerwaltenBoundary" isAbstract="false" isLeaf="false" cachedFullName="Modell::AlleMitgliederVerwaltenBoundary">
+        <elementDefinition Id="820c3e09-97fb-4e01-9e6f-9696ef236311" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f250af3d-8ba3-4b82-9a6c-973635b5c261" name="AlleMitgliederVerwaltenCtrl" isAbstract="false" isLeaf="false" cachedFullName="Modell::AlleMitgliederVerwaltenCtrl">
+        <elementDefinition Id="092da375-8095-41c9-b37c-49a864fe888a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="fcbeeda3-0132-46d8-bc11-6959a165b5ee" name="Mitglied" isAbstract="false" isLeaf="false" cachedFullName="Modell::Mitglied">
+        <elementDefinition Id="40778eab-7afd-4ac0-b0bd-ec817b9ba455" />
+      </referencedType>
+    </packageHasNamedElement>
+    <activityRootModelHasActivity>
+      <activity Id="1cdba4ea-1c96-4e35-9216-01f77ce0d105" name="MitgliedLoeschen" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="b4d27d5f-c81b-45ba-8304-6d7748977dee" />
+        <nodes>
+          <objectNode Id="ec5c9596-2d49-4106-b41e-f8bf7ce89a57" name="Akteur" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="d5296e50-933b-4b71-84b0-b8603e15e515" />
+            <upperBound>
+              <literalInteger Id="b65ddb61-0a23-49a9-ac1b-41c19e70ea89" name="2147483647" value="2147483647">
+                <elementDefinition Id="9bc1e59f-8712-49f8-b6ff-12b9dd0b4b7d" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="712eec55-b53d-4c81-8f39-48f4665221b5" name="Boundary" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="3f6aa79c-8666-4493-af8f-ae2610a16c56" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="81924fb2-b495-48c2-8e43-7e4122684821" LastKnownName="AlleMitgliederVerwaltenBoundary" />
+            </type_NamedElement>
+            <upperBound>
+              <literalInteger Id="89a5fd2a-e05d-4bcd-b461-a8586ac17f2f" name="2147483647" value="2147483647">
+                <elementDefinition Id="cf586ce6-e80a-46a6-af3b-eeb5aa9ceb5d" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="67a76c07-139d-444e-895a-91c55324ba18" name="Controll" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="ed59a2d3-8e8c-469f-9d49-84544529cefb" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f250af3d-8ba3-4b82-9a6c-973635b5c261" LastKnownName="AlleMitgliederVerwaltenCtrl" />
+            </type_NamedElement>
+            <upperBound>
+              <literalInteger Id="88043099-afe7-4a33-b77a-501da6b9a0d9" name="2147483647" value="2147483647">
+                <elementDefinition Id="185bd958-e352-4a7c-b032-e94c84e1c0a0" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="a930cb4a-4ff6-4333-9f46-367e1d86a8cc" name="Mitglied" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="e895b92a-447c-4dfc-80d1-09148965fea2" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fcbeeda3-0132-46d8-bc11-6959a165b5ee" LastKnownName="Mitglied" />
+            </type_NamedElement>
+            <upperBound>
+              <literalInteger Id="caa760e0-b547-497a-a9ae-189195c950ac" name="2147483647" value="2147483647">
+                <elementDefinition Id="f065fd1e-f673-4c14-bace-b3c2b14c9903" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <initialNode Id="dbbd07ce-4444-48f3-acd3-6cf05dc27dac" name="Initial1" isLeaf="false">
+            <elementDefinition Id="c509205f-f99e-40f5-9ef7-461754011172" />
+            <flowNodeTargets>
+              <controlFlow Id="a30fcce6-d4b0-4ef6-9a9b-95ea171caf72" guard="Mitglied, das gelöscht werden soll, wurde ausgewählt" isLeaf="false">
+                <callOperationActionMoniker Id="d049d646-ba65-4276-9350-81f400c05559" LastKnownName="Bestätigung des Löschvorgang ausloesen" />
+                <elementDefinition Id="9fb97e1a-1a3a-434e-aaed-2e42609ae958" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <callOperationAction Id="d049d646-ba65-4276-9350-81f400c05559" name="Bestätigung des Löschvorgang ausloesen" isLeaf="false">
+            <elementDefinition Id="0b12a8f9-07cb-4b7f-906f-32e1bddd2790" />
+            <flowNodeTargets>
+              <controlFlow Id="c489b99c-faaf-4e50-8763-14aa38245a3c" isLeaf="false">
+                <opaqueActionMoniker Id="79f5e35d-bd81-4062-a592-41d5bd60a2c2" LastKnownName="Löschvorgang bestätigen oder abbrechen" />
+                <elementDefinition Id="4fc247c9-1d8c-4b66-a30c-d26228adf1e8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <opaqueAction Id="79f5e35d-bd81-4062-a592-41d5bd60a2c2" name="Löschvorgang bestätigen oder abbrechen" isLeaf="false">
+            <elementDefinition Id="def4ccf1-edb4-430a-adae-6a66968d77bd" />
+            <flowNodeTargets>
+              <controlFlow Id="d0d280fd-64e0-4a11-b9e7-03937391f84a" isLeaf="false">
+                <decisionNodeMoniker Id="12b5b454-0a09-49ab-a6e1-f5bbd8a87b4b" LastKnownName="Decision1" />
+                <elementDefinition Id="b5ca0353-a549-4c5d-ac7e-113e04ca6a44" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="12b5b454-0a09-49ab-a6e1-f5bbd8a87b4b" name="Decision1" isLeaf="false">
+            <elementDefinition Id="37b27d8b-68f2-4aee-8a9d-4fe5d95b8a89" />
+            <flowNodeTargets>
+              <controlFlow Id="db1bdc8b-9d9b-4035-a66d-d4563e4736c2" guard="löschen bestätigt" isLeaf="false">
+                <callOperationActionMoniker Id="814b42aa-2b82-4aef-a4ad-aa8fee78c8cd" LastKnownName="Ausgewähltes Mitglied löschen ausloesen" />
+                <elementDefinition Id="67728757-2517-47b6-8fdb-fac776c124ac" />
+              </controlFlow>
+              <controlFlow Id="1dd22f98-8fed-483b-b384-f1e2a54ef223" isLeaf="false">
+                <activityFinalNodeMoniker Id="019437ff-4cea-44d0-80f6-0cbdcd05a80c" LastKnownName="ActivityFinal2" />
+                <elementDefinition Id="f78b61c9-c7b3-4d49-8bf7-e8b5af28b9e3" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <callOperationAction Id="814b42aa-2b82-4aef-a4ad-aa8fee78c8cd" name="Ausgewähltes Mitglied löschen ausloesen" isLeaf="false">
+            <elementDefinition Id="8b4db2d6-b698-44ea-8e14-4557d6dee942" />
+            <flowNodeTargets>
+              <controlFlow Id="146c35de-bc9c-4312-93c4-cabfd784ae1e" isLeaf="false">
+                <callOperationActionMoniker Id="858269c8-0e11-465b-aa6b-397705f173ca" LastKnownName="Ausgewähltes Mitglied löschen " />
+                <elementDefinition Id="21d5b045-98a8-45bf-b0bc-6fe178729b17" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="858269c8-0e11-465b-aa6b-397705f173ca" name="Ausgewähltes Mitglied löschen " isLeaf="false">
+            <elementDefinition Id="2b854ea2-d824-4687-9716-1c38a72fac80" />
+            <flowNodeTargets>
+              <controlFlow Id="8f85414f-c078-4b97-8bea-6488eb769f96" isLeaf="false">
+                <callOperationActionMoniker Id="2627e36e-14a7-4686-83cb-6b184dcea502" LastKnownName="Mitglied löschen" />
+                <elementDefinition Id="9bdaa40f-b34a-4793-91aa-ea52ec331f22" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <callOperationAction Id="2627e36e-14a7-4686-83cb-6b184dcea502" name="Mitglied löschen" isLeaf="false">
+            <elementDefinition Id="ec031a77-09a3-4bf1-9c28-b3aa1a56e441" />
+            <flowNodeTargets>
+              <controlFlow Id="5ced3cd3-fba3-45af-8dcb-951c6014b31c" isLeaf="false">
+                <activityFinalNodeMoniker Id="a6df7afa-be39-4b91-83bf-f130016cdb23" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="adbd02b5-2a77-4ff0-88f8-92fa590a6acb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </callOperationAction>
+          <activityFinalNode Id="a6df7afa-be39-4b91-83bf-f130016cdb23" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="b1dee213-f19b-45bd-b083-8cab961a2b4e" />
+          </activityFinalNode>
+          <activityFinalNode Id="019437ff-4cea-44d0-80f6-0cbdcd05a80c" name="ActivityFinal2" isLeaf="false">
+            <elementDefinition Id="6b76e9d5-101d-4a08-8f05-f7822828edb0" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="8854082d-8447-4b21-8442-a1c345194815" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+    <profileInstances>
+      <packageHasProfileInstances Id="452c8ad5-609b-445a-85c3-f9b55858214d">
+        <profileInstance Id="54208934-5d35-427b-9ea6-57aef3edf641" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="a24622f2-e755-4206-9424-76c4be15ec10">
+        <profileInstance Id="11a0150d-926f-4e8f-add4-ad301fd75a59" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

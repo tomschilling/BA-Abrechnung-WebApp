@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="dbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="dbModelStoreContainer">
+          <EntitySet Name="tblBenutzer" EntityType="dbModel.Store.tblBenutzer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblMitglieder" EntityType="dbModel.Store.tblMitglieder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tblTrainingseinheiten" EntityType="dbModel.Store.tblTrainingseinheiten" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_tblTrainingseinheiten_tblBenutzer" Association="dbModel.Store.FK_tblTrainingseinheiten_tblBenutzer">
+            <End Role="tblBenutzer" EntitySet="tblBenutzer" />
+            <End Role="tblTrainingseinheiten" EntitySet="tblTrainingseinheiten" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTrainingseinheiten_tblMitglieder" Association="dbModel.Store.FK_tblTrainingseinheiten_tblMitglieder">
+            <End Role="tblMitglieder" EntitySet="tblMitglieder" />
+            <End Role="tblTrainingseinheiten" EntitySet="tblTrainingseinheiten" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tblBenutzer">
+          <Key>
+            <PropertyRef Name="benIdPK" />
+          </Key>
+          <Property Name="benIdPK" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="benName" Type="varchar" MaxLength="25" />
+          <Property Name="benPasswort" Type="varchar" MaxLength="25" />
+          <Property Name="benVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="benIstAdmin" Type="bit" />
+          <Property Name="benIstVorgesetzter" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblMitglieder">
+          <Key>
+            <PropertyRef Name="mitIdPk" />
+          </Key>
+          <Property Name="mitIdPk" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="mitName" Type="varchar" MaxLength="25" />
+          <Property Name="mitVorname" Type="varchar" MaxLength="25" />
+          <Property Name="mitStraßeNr" Type="varchar" MaxLength="50" />
+          <Property Name="mitPlzOrt" Type="varchar" MaxLength="50" />
+          <Property Name="mitTel" Type="varchar" MaxLength="50" />
+          <Property Name="mitEmail" Type="varchar" MaxLength="50" />
+          <Property Name="mitGebDatum" Type="datetime" />
+          <Property Name="mitMtglDatum" Type="datetime" />
+          <Property Name="mitVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="tblTrainingseinheiten">
+          <Key>
+            <PropertyRef Name="trainIdPk" />
+          </Key>
+          <Property Name="trainIdPk" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="trainMitIdFk" Type="int" />
+          <Property Name="trainBenIdFk" Type="int" />
+          <Property Name="trainDatum" Type="datetime" />
+          <Property Name="trainVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <Association Name="FK_tblTrainingseinheiten_tblBenutzer">
+          <End Role="tblBenutzer" Type="dbModel.Store.tblBenutzer" Multiplicity="0..1" />
+          <End Role="tblTrainingseinheiten" Type="dbModel.Store.tblTrainingseinheiten" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblBenutzer">
+              <PropertyRef Name="benIdPK" />
+            </Principal>
+            <Dependent Role="tblTrainingseinheiten">
+              <PropertyRef Name="trainBenIdFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTrainingseinheiten_tblMitglieder">
+          <End Role="tblMitglieder" Type="dbModel.Store.tblMitglieder" Multiplicity="0..1" />
+          <End Role="tblTrainingseinheiten" Type="dbModel.Store.tblTrainingseinheiten" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblMitglieder">
+              <PropertyRef Name="mitIdPk" />
+            </Principal>
+            <Dependent Role="tblTrainingseinheiten">
+              <PropertyRef Name="trainMitIdFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="dbEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="tblBenutzer" EntityType="dbModel.BenutzerEntity" />
+          <EntitySet Name="tblMitglieder" EntityType="dbModel.MitgliedEntity" />
+          <EntitySet Name="tblTrainingseinheiten" EntityType="dbModel.TrainingseinheitEntity" />
+          <AssociationSet Name="FK_tblTrainingseinheiten_tblBenutzer" Association="dbModel.FK_tblTrainingseinheiten_tblBenutzer">
+            <End Role="BenutzerEntity" EntitySet="tblBenutzer" />
+            <End Role="TrainingseinheitEntity" EntitySet="tblTrainingseinheiten" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTrainingseinheiten_tblMitglieder" Association="dbModel.FK_tblTrainingseinheiten_tblMitglieder">
+            <End Role="MitgliedEntity" EntitySet="tblMitglieder" />
+            <End Role="TrainingseinheitEntity" EntitySet="tblTrainingseinheiten" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BenutzerEntity">
+          <Key>
+            <PropertyRef Name="benIdPK" />
+          </Key>
+          <Property Name="benIdPK" Type="Int32" Nullable="false" />
+          <Property Name="benName" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="benPasswort" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="benVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <Property Name="benIstAdmin" Type="Boolean" />
+          <NavigationProperty Name="tblTrainingseinheiten" Relationship="dbModel.FK_tblTrainingseinheiten_tblBenutzer" FromRole="BenutzerEntity" ToRole="TrainingseinheitEntity" />
+          <Property Type="Boolean" Name="benIstVorgesetzter" />
+        </EntityType>
+        <EntityType Name="MitgliedEntity">
+          <Key>
+            <PropertyRef Name="mitIdPk" />
+          </Key>
+          <Property Name="mitIdPk" Type="Int32" Nullable="false" />
+          <Property Name="mitName" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="mitVorname" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="mitStraßeNr" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="mitPlzOrt" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="mitTel" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="mitEmail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="mitGebDatum" Type="DateTime" Precision="3" />
+          <Property Name="mitMtglDatum" Type="DateTime" Precision="3" />
+          <Property Name="mitVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="tblTrainingseinheiten" Relationship="dbModel.FK_tblTrainingseinheiten_tblMitglieder" FromRole="MitgliedEntity" ToRole="TrainingseinheitEntity" />
+        </EntityType>
+        <EntityType Name="TrainingseinheitEntity">
+          <Key>
+            <PropertyRef Name="trainIdPk" />
+          </Key>
+          <Property Name="trainIdPk" Type="Int32" Nullable="false" />
+          <Property Name="trainMitIdFk" Type="Int32" />
+          <Property Name="trainBenIdFk" Type="Int32" />
+          <Property Name="trainDatum" Type="DateTime" Precision="3" />
+          <Property Name="trainVersion" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="tblBenutzer" Relationship="dbModel.FK_tblTrainingseinheiten_tblBenutzer" FromRole="TrainingseinheitEntity" ToRole="BenutzerEntity" />
+          <NavigationProperty Name="tblMitglieder" Relationship="dbModel.FK_tblTrainingseinheiten_tblMitglieder" FromRole="TrainingseinheitEntity" ToRole="MitgliedEntity" />
+        </EntityType>
+        <Association Name="FK_tblTrainingseinheiten_tblBenutzer">
+          <End Type="dbModel.BenutzerEntity" Role="BenutzerEntity" Multiplicity="0..1" />
+          <End Type="dbModel.TrainingseinheitEntity" Role="TrainingseinheitEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BenutzerEntity">
+              <PropertyRef Name="benIdPK" />
+            </Principal>
+            <Dependent Role="TrainingseinheitEntity">
+              <PropertyRef Name="trainBenIdFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTrainingseinheiten_tblMitglieder">
+          <End Type="dbModel.MitgliedEntity" Role="MitgliedEntity" Multiplicity="0..1" />
+          <End Type="dbModel.TrainingseinheitEntity" Role="TrainingseinheitEntity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MitgliedEntity">
+              <PropertyRef Name="mitIdPk" />
+            </Principal>
+            <Dependent Role="TrainingseinheitEntity">
+              <PropertyRef Name="trainMitIdFk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="dbEntities">
+    <EntitySetMapping Name="tblBenutzer">
+      <EntityTypeMapping TypeName="IsTypeOf(dbModel.BenutzerEntity)">
+        <MappingFragment StoreEntitySet="tblBenutzer">
+          <ScalarProperty Name="benIstVorgesetzter" ColumnName="benIstVorgesetzter" />
+                <ScalarProperty Name="benIdPK" ColumnName="benIdPK" />
+          <ScalarProperty Name="benName" ColumnName="benName" />
+          <ScalarProperty Name="benPasswort" ColumnName="benPasswort" />
+          <ScalarProperty Name="benVersion" ColumnName="benVersion" />
+          <ScalarProperty Name="benIstAdmin" ColumnName="benIstAdmin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMitglieder">
+      <EntityTypeMapping TypeName="IsTypeOf(dbModel.MitgliedEntity)">
+        <MappingFragment StoreEntitySet="tblMitglieder">
+          <ScalarProperty Name="mitIdPk" ColumnName="mitIdPk" />
+          <ScalarProperty Name="mitName" ColumnName="mitName" />
+          <ScalarProperty Name="mitVorname" ColumnName="mitVorname" />
+          <ScalarProperty Name="mitStraßeNr" ColumnName="mitStraßeNr" />
+          <ScalarProperty Name="mitPlzOrt" ColumnName="mitPlzOrt" />
+          <ScalarProperty Name="mitTel" ColumnName="mitTel" />
+          <ScalarProperty Name="mitEmail" ColumnName="mitEmail" />
+          <ScalarProperty Name="mitGebDatum" ColumnName="mitGebDatum" />
+          <ScalarProperty Name="mitMtglDatum" ColumnName="mitMtglDatum" />
+          <ScalarProperty Name="mitVersion" ColumnName="mitVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTrainingseinheiten">
+      <EntityTypeMapping TypeName="IsTypeOf(dbModel.TrainingseinheitEntity)">
+        <MappingFragment StoreEntitySet="tblTrainingseinheiten">
+                <ScalarProperty Name="trainIdPk" ColumnName="trainIdPk" />
+          <ScalarProperty Name="trainMitIdFk" ColumnName="trainMitIdFk" />
+          <ScalarProperty Name="trainBenIdFk" ColumnName="trainBenIdFk" />
+          <ScalarProperty Name="trainDatum" ColumnName="trainDatum" />
+          <ScalarProperty Name="trainVersion" ColumnName="trainVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Kein" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

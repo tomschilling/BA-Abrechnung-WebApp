@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="c5d61511-f7a8-4c5d-975b-591b7d69ab91" name="HinzufuegenMitglied" linkedPackageId="62a66ba4-169e-4969-ba71-b2cc6ad575c5" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="94c3e509-271a-47f5-9159-1ea1568590cf" name="HinzufuegenMitglied" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="0d7a9331-8aa7-4c87-82e2-f6ef59a30ad6" />
+        <nodes>
+          <objectNode Id="0481435b-b383-45f5-a837-4d4fdfe0a495" name="Mitarbeiter/Vorgesetzter" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="dc5828b2-866a-4580-9780-0726e0527705" />
+            <upperBound>
+              <literalInteger Id="dae78fa5-09af-412f-b0cd-aac9f729b5be" name="2147483647" value="2147483647">
+                <elementDefinition Id="002cdb5c-53c2-4b6a-8c36-2f82c9c1a406" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="2b6fef49-0536-4640-91a5-7b4a4f58b4f6" name="System " isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="e20620a9-b903-4b7f-b31e-e14c5f1f9ddd" />
+            <upperBound>
+              <literalInteger Id="e10481ad-809d-4cb7-b099-63c2299d4346" name="2147483647" value="2147483647">
+                <elementDefinition Id="60956a9e-c0fa-4bca-a7b9-5cd3821b69b0" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <initialNode Id="a8c6f27c-f2e9-4744-9eb0-993a421fde14" name="Initial1" isLeaf="false">
+            <elementDefinition Id="1297a5e7-681a-4de8-be51-9ee5775c2e2b" />
+            <flowNodeTargets>
+              <controlFlow Id="1a5623fe-f944-43f3-8746-9ee7db222895" isLeaf="false">
+                <opaqueActionMoniker Id="8eca6b78-4db4-41a1-80dc-ba1f2c27ff2f" LastKnownName="Seite für Mitgliedsdateneingabe anzeigen " />
+                <elementDefinition Id="bdebacba-0c22-405a-8477-a6e4840bbd7c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="8eca6b78-4db4-41a1-80dc-ba1f2c27ff2f" name="Seite für Mitgliedsdateneingabe anzeigen " isLeaf="false">
+            <elementDefinition Id="4053de03-1acb-4af3-94b9-caf2e0e248d3" />
+            <flowNodeTargets>
+              <controlFlow Id="9e7ddffd-0e00-425f-bbf0-53bf0e4bc82f" isLeaf="false">
+                <opaqueActionMoniker Id="72cda43c-b39e-4a48-a1a6-c56c690da86b" LastKnownName="Stammdaten des Mitglieds eingeben und speichern oder Beenden  " />
+                <elementDefinition Id="a99ecc4e-96fa-4e0b-bcbb-c3fb53cd1974" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="72cda43c-b39e-4a48-a1a6-c56c690da86b" name="Stammdaten des Mitglieds eingeben und speichern oder Beenden  " isLeaf="false">
+            <elementDefinition Id="92fea2b3-ae9e-4d44-818b-599d7aab39b0" />
+            <flowNodeTargets>
+              <controlFlow Id="f552c82d-11b3-4e8d-acc4-daadea74b86d" isLeaf="false">
+                <decisionNodeMoniker Id="df8cd87a-059b-473f-bd62-91b1edab9dc3" LastKnownName="Decision1" />
+                <elementDefinition Id="b9ae6982-7ddd-499e-9be5-a89116ff1779" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="df8cd87a-059b-473f-bd62-91b1edab9dc3" name="Decision1" isLeaf="false">
+            <elementDefinition Id="09b89dd8-9d5e-4e82-a38d-6fb72434196b" />
+            <flowNodeTargets>
+              <controlFlow Id="402c6cb3-29e3-4aa5-a582-ae281aee716d" guard="Beenden" isLeaf="false">
+                <opaqueActionMoniker Id="82bf815c-e312-4d8d-b48b-a607bcce8516" LastKnownName="Beenden" />
+                <elementDefinition Id="44e232fc-a5c5-4696-9d06-9deb4db9e1e3" />
+              </controlFlow>
+              <controlFlow Id="aa194dca-d911-4644-9037-d4c3ce3d3074" guard="Speichern" isLeaf="false">
+                <opaqueActionMoniker Id="2abf5803-8131-40d4-aeb1-4ec93015bba1" LastKnownName="Speichert Migliedsdaten" />
+                <elementDefinition Id="c6b0cc87-0a3e-4dd1-8b38-6b6eebe76525" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="82bf815c-e312-4d8d-b48b-a607bcce8516" name="Beenden" isLeaf="false">
+            <elementDefinition Id="41026c9a-c4ab-4278-8c23-cf0425004a34" />
+            <flowNodeTargets>
+              <controlFlow Id="8f8a8f1f-ec94-45e3-9a26-aebb6140ce0d" isLeaf="false">
+                <activityFinalNodeMoniker Id="f6423994-3625-425b-9e82-0481da41b96b" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="4a813c1b-b4eb-4acf-90dc-bc614a489eeb" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="f6423994-3625-425b-9e82-0481da41b96b" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="881456ab-b848-490a-b25f-cd7c1c9b220f" />
+          </activityFinalNode>
+          <opaqueAction Id="2abf5803-8131-40d4-aeb1-4ec93015bba1" name="Speichert Migliedsdaten" isLeaf="false">
+            <elementDefinition Id="b411c069-0e40-4eae-bb77-b04d1f95b707" />
+            <flowNodeTargets>
+              <controlFlow Id="b8a9f116-bb6f-4419-a7e2-fd01bb862aad" isLeaf="false">
+                <opaqueActionMoniker Id="82bf815c-e312-4d8d-b48b-a607bcce8516" LastKnownName="Beenden" />
+                <elementDefinition Id="ffaa46b7-fed8-4074-9eea-3a148e781d87" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="62a66ba4-169e-4969-ba71-b2cc6ad575c5" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+    <profileInstances>
+      <packageHasProfileInstances Id="54a91607-63af-4d15-9a1f-19c0ce0e3cd5">
+        <profileInstance Id="75526874-b1e5-4a97-bfeb-de99d84fb80d" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f1ad074d-0e1d-4253-8c29-8c323a60534e">
+        <profileInstance Id="59b87a5d-7d74-45c5-9a24-ef135a0db4e1" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

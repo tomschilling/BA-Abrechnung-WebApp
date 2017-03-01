@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="80415bbe-145f-4a34-a78b-67c20d167e43" name="PasswortVergessen" linkedPackageId="f10b5714-fde9-452f-8d7e-0a98c53919f0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="2a1d0f23-1a66-4730-a649-b58a8c2d31c0">
+      <profileInstance Id="090ed3b9-b469-4174-8322-1892420abda1" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2f156926-d1c0-4419-a0f5-1c325a35ca8a">
+      <profileInstance Id="e1dd5151-f9e1-4028-bc99-7d84c92dc77e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="8387d78b-ffb7-4686-807c-e704716737e1" name="PasswortVergessen" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="aa8f052e-6847-4c6f-aafd-b54056fc5bb4" />
+        <nodes>
+          <objectNode Id="2a94b67e-75a7-4e29-bb1b-9515663c9ea9" name="Benutzer" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="76bfc75c-3a40-4b35-9d19-d68f73014b76" />
+            <upperBound>
+              <literalInteger Id="fb10a8dd-066a-42d8-8d89-4e703a6f5dd9" name="2147483647" value="2147483647">
+                <elementDefinition Id="e3ff130f-525b-4c58-a922-24328aa9e2aa" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <objectNode Id="8ba6dfea-f417-439d-a15f-d787c372ba89" name="System" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="e0a69abd-3d7c-4361-aae7-227c5d2fa961" />
+            <upperBound>
+              <literalInteger Id="4a3b29b6-4d24-49e8-a5b7-9994dc5d8127" name="2147483647" value="2147483647">
+                <elementDefinition Id="4956901a-6add-42a8-9693-7e4edf072afa" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <initialNode Id="9f6c0c5f-9fb8-4827-bb92-1c421a8410d5" name="Passwortvergessen" isLeaf="false">
+            <elementDefinition Id="1c111b04-5edb-4a8c-8ea3-2876d7a015de" />
+            <flowNodeTargets>
+              <controlFlow Id="ff2fd284-61c4-4d39-8600-cf8f5e37ac3a" name="Passwortvergessen" isLeaf="false">
+                <mergeNodeMoniker Id="b4124e30-7b41-4493-805e-690871fd1229" LastKnownName="Merge1" />
+                <elementDefinition Id="ba5f29b8-99a5-42ef-a9f5-34b81598be7f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="5a09ece5-9d89-4500-9939-7f065b69ad6e" name="Anzeige Login-View" isLeaf="false">
+            <elementDefinition Id="3644a2c4-53b1-47ac-bc06-090a3f1c9238" />
+            <flowNodeTargets>
+              <controlFlow Id="37547452-d96e-46d5-a054-7b334b9519d3" isLeaf="false">
+                <opaqueActionMoniker Id="d73b3fbe-ee28-4f9f-9e45-96225e9dccb6" LastKnownName="Benutzer kann sich nicht einloggen, da Passwort falsch" />
+                <elementDefinition Id="1ef085dd-2266-4cd7-b616-ab854b6b84a9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="d73b3fbe-ee28-4f9f-9e45-96225e9dccb6" name="Benutzer kann sich nicht einloggen, da Passwort falsch" isLeaf="false">
+            <elementDefinition Id="28f6945e-3215-45ff-9405-f736115e90ff" />
+            <flowNodeTargets>
+              <controlFlow Id="208e1f38-a164-4f19-b39b-66c5499e1fd8" guard="User gibt auf" isLeaf="false">
+                <activityFinalNodeMoniker Id="e35aa52f-5827-4c0b-ab8f-697e1bb11c8b" LastKnownName="ActivityFinal11" />
+                <elementDefinition Id="bcc45f9d-733d-4be5-8281-16cb349d8c7a" />
+              </controlFlow>
+              <controlFlow Id="0da27926-c686-4258-8077-ee42f267e4ea" guard="wählt &quot;Passwort vergessen?&quot; aus" isLeaf="false">
+                <opaqueActionMoniker Id="d3f8b673-fd06-4d00-b699-2af599037c37" LastKnownName="Bereitstellen Seite mit Eingabe der Benutzer-E-Mail" />
+                <elementDefinition Id="50a03d9d-8fe5-48ec-b353-b07e5f2a83c4" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode Id="b4124e30-7b41-4493-805e-690871fd1229" name="Merge1" isLeaf="false">
+            <elementDefinition Id="65cb268b-7eed-425d-8a5d-b9e92061ba52" />
+            <flowNodeTargets>
+              <controlFlow Id="eb3e962b-8809-4f9c-aa48-0fda7eb593e2" isLeaf="false">
+                <opaqueActionMoniker Id="5a09ece5-9d89-4500-9939-7f065b69ad6e" LastKnownName="Anzeige Login-View" />
+                <elementDefinition Id="c581839f-65fc-4838-9eb7-ef6d867cfc05" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <opaqueAction Id="06a45f66-f741-4360-91d4-54f09dfb9acd" name="Speichern des neuen Passworts" isLeaf="false">
+            <elementDefinition Id="d9570d4c-d646-419a-94f7-6235c500f668" />
+            <flowNodeTargets>
+              <controlFlow Id="f0a7b485-9c9a-4bb1-a51d-dee77bbaef91" isLeaf="false">
+                <opaqueActionMoniker Id="5a09ece5-9d89-4500-9939-7f065b69ad6e" LastKnownName="Anzeige Login-View" />
+                <elementDefinition Id="e860dff8-4ea7-4940-8d1b-e4eaeba5fc1c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="e35aa52f-5827-4c0b-ab8f-697e1bb11c8b" name="ActivityFinal11" isLeaf="false">
+            <elementDefinition Id="3eb56c4e-aaff-4458-b3c9-45659c452ecd" />
+          </activityFinalNode>
+          <opaqueAction Id="d3f8b673-fd06-4d00-b699-2af599037c37" name="Bereitstellen Seite mit Eingabe der Benutzer-E-Mail" isLeaf="false">
+            <elementDefinition Id="0f6932fe-2c8f-43c7-aff8-60553deb3d2e" />
+            <flowNodeTargets>
+              <controlFlow Id="9ebd79f3-0457-4332-aeb6-cd34cc37fae6" isLeaf="false">
+                <opaqueActionMoniker Id="10840ea0-584e-4747-b3c2-ea4a36d7b7cf" LastKnownName="Versenden E-Mail zum neu setzen des Passworts" />
+                <elementDefinition Id="740896ce-61d1-4261-851d-f922cfee4109" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <objectNode Id="f10c5a46-6559-4173-a7a9-7f8996d0783e" name="Mailsystem" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="42d7b6f8-677a-42d1-be9b-e3829313bf21" />
+            <upperBound>
+              <literalInteger Id="76174a4b-3023-46b7-bba2-42e495997994" name="2147483647" value="2147483647">
+                <elementDefinition Id="6cfcaf10-0405-4594-a288-55e9f34576c2" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="10840ea0-584e-4747-b3c2-ea4a36d7b7cf" name="Versenden E-Mail zum neu setzen des Passworts" isLeaf="false">
+            <elementDefinition Id="4fbfdc07-4ac1-4a9c-8114-73c37555efa6" />
+            <flowNodeTargets>
+              <controlFlow Id="be330f02-bdf4-4853-9e45-e83d4a547ae6" isLeaf="false">
+                <opaqueActionMoniker Id="8a0f6b9c-010a-408b-b261-e9c98765da67" LastKnownName="Benutzer öffnet E-Mail und folgt Link" />
+                <elementDefinition Id="c261ca25-dc00-4a51-be6c-2045a67b28c0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="8a0f6b9c-010a-408b-b261-e9c98765da67" name="Benutzer öffnet E-Mail und folgt Link" isLeaf="false">
+            <elementDefinition Id="b819de31-2ed5-42cd-aeda-2bd7ac783050" />
+            <flowNodeTargets>
+              <controlFlow Id="33ef7e08-666c-4362-abc5-f72015ba446b" isLeaf="false">
+                <opaqueActionMoniker Id="2e56b467-dbf5-43c7-b2a8-907ac8a3ab23" LastKnownName="Bereitstellen Seite zum neu anlegen des Passworts" />
+                <elementDefinition Id="0b6519af-8f89-4d33-b52b-0b03273f2809" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="2e56b467-dbf5-43c7-b2a8-907ac8a3ab23" name="Bereitstellen Seite zum neu anlegen des Passworts" isLeaf="false">
+            <elementDefinition Id="3fde454a-8567-409e-872a-2f3348bc9a1c" />
+            <flowNodeTargets>
+              <controlFlow Id="e4b9a916-55da-4ffd-8ec8-4e9b4c33cec8" isLeaf="false">
+                <opaqueActionMoniker Id="06a45f66-f741-4360-91d4-54f09dfb9acd" LastKnownName="Speichern des neuen Passworts" />
+                <elementDefinition Id="62ad3554-de8d-4806-86cc-2420a1c58a4c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="f10b5714-fde9-452f-8d7e-0a98c53919f0" name="Modell">
+    <elementDefinition Id="b513d571-e8d0-434b-be3a-d44dc4a22869" />
+  </package>
+</activityRootModel>
